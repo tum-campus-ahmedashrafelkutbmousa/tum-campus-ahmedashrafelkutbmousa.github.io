@@ -1,0 +1,5617 @@
+/* Reset styles for no browser differences */
+HTML, BODY { margin:0;padding:0; }
+
+/* ------------------------------------------------------------------------- */
+/* Allgemeine CSS-Klassen
+/* ------------------------------------------------------------------------- */
+
+/**
+ * Textgr��en
+ */
+.small  { font-size: 0.8em; }
+.medium { font-size: 0.9em; }
+.normal { font-size: 1.0em; }
+.large  { font-size: 1.2em; }
+
+/**
+ * Textstyles
+ */
+.TextToolTip {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  cursor: help;
+ }
+.noTextDecoration { text-decoration: none; }
+.bold          { font-weight: bold; }
+.italic        { font-style: italic; }
+.underlined    { text-decoration: underline; }
+.smallCaps     { font-variant: small-caps; }
+.strikeThrough { text-decoration: line-through; }
+/* Textumbruch: Zeilenumbruch wie im Quellcode angegeben */
+.whiteSpaceBreak  { white-space:pre-wrap; }
+
+/**
+ * Schriftfarben
+ */
+.errorText    { color: #D90D0D; }
+.warningText  { color: #BD6A08; }
+.infoText     { color: #2D7242; }
+.standardText { color: #000000 ! important; }
+
+/**
+ * Rahmen(farben)
+ */
+.noOutline {
+  outline: none !important;
+}
+
+/**
+ * Schriftarten
+ */
+.monoSpace   { font-family :monospace;}
+
+.errorBorder {
+  border: 2px dashed #D90D0D;
+  padding: 5px;
+}
+.warningBorder {
+  border: 2px dashed #BD6A08;
+  padding: 5px;
+}
+.infoBorder {
+  border: 2px dashed #2D7242;
+  padding: 5px;
+}
+.groupBorder {
+  border: dotted 2px gray !important;
+}
+.smallBorder {
+  border: solid 1px gray !important;
+}
+.noBorder {
+  border: none 0px !important;
+}
+.eyeCatchingBorder {
+  border: 2px solid #81F781 !important;
+}
+
+/**
+ * andere allgemeine Klassen
+ */
+.invisible { display:none !important; }
+.nowrap {   white-space:nowrap; }
+.clickable { cursor: pointer; }
+.floatRight { float: right; }
+.minwidth  { width: 1px;}
+.hidden { visibility: hidden; }
+.cursorMove { cursor : move; }
+
+.forceInvisible { display:none !important;}
+
+.s{font-size:0.8em;}
+.m{font-size:1em;}
+.xl{font-size:1.7em;}
+.xs{font-size:0.7em;}
+
+.indent1 { padding-left: 1em; }
+.indent2 { padding-left: 2em; }
+.indent3 { padding-left: 3em; }
+
+.bottom {vertical-align:bottom;}
+.middle {vertical-align:middle;}
+.top    {vertical-align:top;}
+
+.nounderline { text-decoration: none; }
+.underline { text-decoration: underline; }
+
+.C { text-align:center; }
+.L { text-align:left;  margin-left:2px; }
+.R { text-align:right; margin-right:2px; }
+
+.hi:hover { background-color:#FDFDD8; color:#000; }
+
+.w100Percent { width: 100%; }
+
+fieldset.w100PercentCT > table { width: 100%; }
+
+.noMargin { margin: 0em; }
+
+.normalWeight { font-weight:normal; }
+
+.whiteText { color: white; }
+.redBackGround { background-color: #990000; }
+.whiteBackground { background-color: #FFFFFF; }
+
+
+.pageDisabled
+{
+margin: 0px; z-index: 100; position: fixed;  
+top: 0px; left: 0px; right: 0px; bottom: 0px; 
+background-color: #000000; 
+opacity: 0.2; filter: alpha(opacity = 20);
+}
+
+
+.pageLoading
+{
+/* old styles: */ /*
+padding-left: 10px; 
+margin: 0px; z-index: 9999; 
+top: 10px; right: 30px; width: 80px; 
+line-height: 1.5em; 
+color: white; 
+background: #00AA00 url(/tumprod/img/ajaxloader.gif) no-repeat scroll 5px center; 
+text-align: center; 
+display: block;
+position: fixed; 
+*/
+background: #efefef url(/tumprod/img/loading_24x24.gif) no-repeat scroll center 5px; /* update icon with new %IMG->loading_24x24 */
+border: 1px solid #cdcdcd; 
+color: #111; 
+display: block; 
+padding: 30px 10px 0px 10px; 
+line-height: 40px; 
+margin: auto; 
+max-width: 60px; 
+overflow: hidden; 
+position: fixed; 
+right: 49%; 
+text-align: center; 
+top: 46%; 
+width: 60px; 
+z-index: 9999; 
+} 
+
+* html .pageLoading {position: absolute;} 
+
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* PUPage-Adaption */
+/* ------------------------------------------------------------------------- */
+
+/* PAGE-HEADER-OLD */
+TABLE.bodyTable { width:100%;margin:0px;padding:0px;border-bottom:1px solid #e5e5e5; }
+TD.pageOwner
+{ 
+  font-size:1em; color:#000000;  
+  background-color:#F1F1F1; 
+  padding-right:16px;
+  padding-left:16px; 
+  border : 1px solid; 
+  border-bottom:0px;  
+  border-color : #e5e5e5 #777777 #777777 #e5e5e5; 
+}
+
+TABLE.pageObjectNoTopBorder
+{ 
+  border:1px solid #e5e5e5;border-top:0px; 
+  margin:0px  0px 10px 0px; 
+  padding:1px 1px 5px 10px; 
+}
+
+.headerHeading{font-weight:bold;font-size:1.1em;}
+
+/* PAGE-FOOTER-OLD */
+TD.footerCell {  
+  text-align:left;
+  font-size:0.8em;
+  white-space:nowrap;
+  background-color: #F1F1F1;
+}
+
+.headerObject
+{
+  padding-left: 1em;
+}
+
+/* LINKS */
+ a{color:#23238E;font-family:Arial,Helvetica,sans-serif;} /*m*/
+ a:link{color:#23238E;}
+ a:visited{color:#23238E;}
+ a:hover{color:#D20000;}
+ a:active{color:#D20000;}
+
+ a.active {color:#D20000;}
+
+ 
+/* ------------------------------------------------------------------------- */ 
+/* CoPage */
+/* ------------------------------------------------------------------------- */
+
+html, body {
+  margin: 0;
+  padding: 0;  
+}
+
+body { 
+  font-family: verdana, tahoma, helvetika, arial;
+  background-color:#FFFFFF;
+  color: #000000;
+}
+
+#pageContent {
+  padding:12px;  
+  font-family: Arial,Helvetica,sans-serif;
+  margin-top: 0px !important; /* avoid jumping of page! */
+}
+
+#pageFooter {
+  font-size:0.8em;
+  background-color: #F1F1F1;   
+}
+
+.pageCenter {
+  margin-left  : auto !important;
+  margin-right : auto !important;
+
+  text-align:center;
+}
+
+.pageCenterBox
+{  
+max-width    : 40em;
+min-width    : 20em;
+margin-left  : auto;
+margin-right : auto;
+padding      : 0.8em;
+background-color : white;
+border       : 4px outset gray;
+}
+
+img { border: 0; }
+
+
+/* ------------------------------------------------------------------------- */ 
+/* CoError */
+/* ------------------------------------------------------------------------- */
+#errorPage
+{
+  font-size: 14px; 
+  margin: 0; 
+  padding: 50px 100px 0px 50px;
+}
+
+#errorPage div
+{
+  background-color: #F0F0EE; 
+  border: 1px solid #c8c8dd;
+  padding: 10px;
+}
+
+#errorPage > div 
+{
+    clear: both;
+    width:auto;
+    min-width: 95%;
+    float: left;
+}
+
+#errorPageSymbole
+{
+  width: 5em;
+}
+
+#errorPageTitle
+{
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+}
+
+.errorPageContent
+{
+  white-space: pre-wrap; 
+}
+
+.errorPageInfo
+{
+  background-color: #79aad0;
+}
+
+.errorPageWarning
+{
+  background-color: #FFC900;
+}
+
+.errorPageError
+{
+  background-color: #D42929;
+}
+
+.errorIconAnchor
+{
+  padding-right:3px;
+  position:relative;
+  top:3px;
+}
+
+label.validateError
+{
+   font-weight:bold;
+}
+/* ------------------------------------------------------------------------- */ 
+/* CO Dialog                                                                 */
+/* ------------------------------------------------------------------------- */
+#idDialog {
+  background-color: #F0F0EE;
+  border: 1px solid black;
+  text-align: left;
+  display: table;
+  padding: 0.4em;
+/*  top: 25% !important; */ /* to be always visible */ /* Funktioniert leider nicht! */
+}
+
+#idDialog p {
+  padding-left: 10px;
+}
+
+#idDialogTitle {
+  margin: 0px;
+  padding: 2px 5px 2px 5px;
+  color: white;
+  font-weight: bold;
+  cursor: move;
+}
+
+#idDialogButtonBar {
+  text-align: right; /* align button bar at the right side; for IE */
+}
+
+/** for all other browsers **/
+html>/**/body #idDialogButtonBar {
+  float: right;
+}
+
+.dialogError {
+  background-color: #D42929;
+}
+
+.dialogInfo {
+  background-color: #79aad0;
+}
+
+.dialogWarning {
+  background-color: #FFC900;
+}
+
+.dialogConfirm {
+  background-color: #79aad0;
+}
+
+.dialogChoice {
+  background-color: #79aad0;
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* MessageBoxes (wirkt sich auch auf MessageLayer aus)  */
+/* ------------------------------------------------------------------------- */
+
+.msgs li.message {
+  line-height: 21px;
+  padding-top:0.2em;
+  padding-left: 30px; 
+  display: block;
+   list-style-type: none;  
+}
+
+.msgs ul   { padding: 0; margin:0; }
+.msgs li   { display: none; }
+.msgs span { font-weight:bold; }
+.msgs a    { text-decoration:none; }
+
+.msgDebug   li.message { background: transparent url(/tumprod/img/msg_debug_small.gif)   no-repeat scroll left center; }
+.msgFatal   li.message { background: transparent url(/tumprod/img/msg_fatal_small.gif)   no-repeat scroll left center; }
+.msgError   li.message { background: transparent url(/tumprod/img/msg_error_small.gif)   no-repeat scroll left center; }
+.msgWarning li.message { background: transparent url(/tumprod/img/msg_warning_small.gif) no-repeat scroll left center; }
+.msgInfo    li.message { background: transparent url(/tumprod/img/msg_info_small.gif)    no-repeat scroll left center; }
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* f�r bessere Web Accessibility */
+/*
+.msgDebug   span { color: #109AF3;}
+.msgFatal   span { color: red;    }
+.msgError   span { color: #DE0108;}
+.msgWarning span { color: #D7A618;}
+.msgInfo    span { color: #008000;}
+*/
+
+.msgDebug   span { color: black;}
+.msgFatal   span { color: black;}
+.msgError   span { color: black;}
+.msgWarning span { color: black;}
+.msgInfo    span { color: black;}
+/* ------------------------------------------------------------------------- */ 
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* MessageLayer */
+/* ------------------------------------------------------------------------- */
+@media screen, projection{
+#idToolbar
+{
+ float: right;  
+ padding: 5px;
+ position: relative;
+ top: 0em;
+}
+
+#idMsgLayerClosed
+{
+ background-color: #F5F6BE ;
+ border: 1px solid black;
+ z-Index: 1000;
+ padding: 5px;
+ overflow: auto; 
+ position: fixed; 
+ top: 0em;
+ right: 0em;
+}
+
+#idMsgLayer {
+ background-color: #F5F6BE ;
+ border-style:solid;
+ border-color:black;
+ border-width: 1px 1px 1px 1px;
+ width:100%;
+ z-Index: 1000;
+ overflow: auto; 
+ position: fixed; 
+ top: 0.1em;
+ left: 0.1em;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+}
+
+#idMsgLayer div.msgs
+{
+  padding-left:24px;
+  padding-right:24px;
+  padding-top:24px;
+  padding-bottom:24px;    
+}
+
+/* position and button styles in msgLyer */
+BODY #idMsgLayer { 
+border-radius:0; 
+float:none;left:25%;right:25%;top:0; /*centering messagelayer */
+min-width:24em;
+max-width:50% !important;
+padding:0;margin:0;
+opacity:0.85;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+}
+
+BODY #idMsgLayer, BODY #idMsgLayerClosed { 
+border:1px solid #888;
+border-radius:0;
+margin:0;
+padding:0;
+font-size:0.9em;
+line-height:1.4em;
+right:10px;
+top:10px;
+background:rgb(254, 244, 186); /*#eff2f5*/
+}
+
+BODY #idMsgLayer > #idToolbar, 
+BODY #idMsgLayer > div.msgs, 
+BODY #idMsgLayerClosed { 
+padding:5px 
+}
+
+BODY #idMsgLayer div.msgs > ul { 
+border:none; 
+background:transparent; 
+}
+
+BODY #idMsgLayer > #idToolbar #idToolErrorSummary > img {
+padding-top:1px;
+vertical-align:top;
+}
+
+} /* end media query */
+
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* CoPage */
+/* ------------------------------------------------------------------------- */
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+} 
+
+.componentErrorBorder
+{
+  border:2px solid red;
+  padding:1em;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* CoNavigation */
+/* ------------------------------------------------------------------------- */
+
+TABLE.puNav
+{
+  background-color: #F1F1F1;  
+  
+  border-right:  1px solid #777777; 
+  border-left :  1px solid #e5e5e5;    
+  border-top:    1px solid #e5e5e5; 
+  border-bottom: 1px solid #777777;
+  
+  margin:  0px;
+  padding: 1px;
+  
+  font-size: 0.85em;
+}
+
+.puNav TH 
+{ 
+  text-align: right; 
+  font-weight: normal; 
+  padding: 3px 5px 3px 5px;
+}
+
+.puNav TD
+{
+   text-align: left; 
+}
+
+.puNav .coNavSection { background-color: #CCCCCC; }
+.puNav .coNavSection TH { font-weight: bold; }
+
+.puNav a { padding-right: 5px; }
+
+.puNav .selected
+{
+  font-weight: bold;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.fixed
+{
+  border: 3px solid green;
+}
+
+
+.coNav
+{
+  background-color: #F0F0EE;
+  border: 1px solid #c8c8dd;
+}
+
+.coNavSectionTitle
+{
+  background-color: #CCCCCC;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 2px;  
+  padding-left: 5px;
+  margin-top: 10px;
+}
+
+.coNavGroupTitle
+{
+  margin-top: 5px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.coNavUnIndent
+{
+  margin-left: -0.8em !important;
+}
+
+.coNav img
+{
+  padding-left:   0em !important;
+  margin-right:  0.5em;
+  vertical-align: middle;
+  width: 18px;
+}
+
+.coNav a
+{
+  line-height:1.5em;
+  margin-right: 20px;
+}
+
+.navEntry .selected
+{
+  font-weight: bold;
+  text-decoration: none !important;
+  color: black !important;
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* CoTable */
+/* ------------------------------------------------------------------------- */
+
+table.cotable
+{ 
+   border-collapse: collapse;
+   border-spacing: 0px;
+   width: 100%;
+}
+@media screen, projection{
+  .coTableBoxed
+  {
+    border: 0px solid black;
+  }
+}
+@media print{
+  .coTableBoxed
+  {
+    overflow: visible;
+  }
+}
+
+
+table.cotable caption
+{
+  background-color:#e3e5e7;
+  font-weight:bold;
+  font-size:1.2em;
+}
+
+.coTableNavi
+{
+  width: 100%;  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-spacing: 0px;  
+}
+
+.coMulticheck
+{
+  background: transparent url(/tumprod/img/multicheck.gif)   no-repeat scroll left center; 
+  display: block;
+  width: 20px;
+  text-decoration: none;
+  text-align:center !important;
+}
+
+.coMultiuncheck
+{
+  background: transparent url(/tumprod/img/multiuncheck.gif)   no-repeat scroll left center;
+  display: block;
+  width: 20px;
+  text-decoration: none;
+  text-align:center !important;
+}
+
+.coTableNaviItem
+{
+  font-weight:bold;
+  padding-right : 0.15em;
+}
+
+.coTableNavi td
+{
+  background-color: #F1F1F1;
+  border: solid 1px #FFFFFF;  
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.coTableNavi > tbody > tr > td:first-child { 
+padding-left:2px;
+}
+
+.coTableNavi td > a.commandButton  {
+   margin: 2px 6px 2px 0px;
+}
+
+.coTableNavi td > select  {
+   margin: 2px 6px 2px 0px;
+}
+
+.coTableNaviPageSelect
+{
+  text-align: right;
+}
+
+a.coTableNaviNextPage + label.invisible + select {
+    margin-left: 6px;
+}
+
+tr.rowselect td
+{
+  cursor: pointer;
+} 
+
+table.cotable th 
+{ 
+   background-color:#C8C8DD;
+   color:#444;
+   border: solid 1px #F0F0EE;
+   font-weight:normal;
+   white-space: nowrap;
+   padding: 0.3em;
+   padding-top: 0.1em;
+   padding-bottom: 0.1em;
+
+}
+table.cotable th  a
+{ text-decoration: none; }
+
+table.cotable  > thead > tr > th { /* for being more responsive */
+white-space:normal; 
+}
+
+
+
+/* grouping row */
+table.cotable .coTableGR1 { 
+   background-color: #DDDDDD;
+   font-weight:bold;
+   text-indent:5px; 
+   font-style:italic; 
+}
+
+table.cotable .coTableGR1TH { 
+   font-weight:bold;
+   text-indent:5px; 
+   font-style:italic; 
+}
+
+table.cotable .coTableGR2 { 
+   background-color: #DDDDDD; 
+   text-indent:10px; 
+   font-style:italic; 
+}
+
+/* sum row */
+table.cotable .coTableSUMR { 
+   border-top:1px solid #444; 
+   background-color: #FFF;
+   text-indent:5px; 
+   font-style:italic; 
+   font-weight:bold;
+}
+
+table.cotable  td{
+ /*border: solid 1px #F0F0EE;*/
+ padding: 0.3em;
+ padding-top: 0.1em;
+ padding-bottom: 0.1em;
+}
+
+table.cotable .changedRow>td:first-child { border-left: 3px solid orange; }
+table.cotable .faultyRow>td:first-child { border-left: 3px solid red; }
+table.cotable .focusedRow td  {  background-color: #F5F6BE; }
+table.cotable tr.z0.selectedRow {   background-color: #DDFFDD; }
+table.cotable tr.z1.selectedRow {   background-color: #e9FFe9; }
+
+.z0 { background-color:#F6F6F6; }
+.z1 { background-color:#FFF; }
+
+.roundBorders{
+-webkit-border-radius: 0.2em;
+-moz-border-radius: 0.2em;
+border-radius: 0.2em;
+}
+
+.cotable thead tr th:last-child div.coFilter { 
+/* right: 0px; /* avoid cutting of overlay for coFilter when viewing in the last column at the right - only works for relative positioned ths' overlays */
+} 
+.cotable thead tr th:first-child div.coFilter { 
+left:0px; /* last but also first always left */
+}
+
+
+.summe {
+  border-top: 0.1em solid;
+  border-bottom: 0.3em double;
+}
+
+
+/* see scrollbars also for boxed table in overlays and multiple tabs */
+.tab_container .tab_internal_content > table > tbody > tr > td:not(:first-child) div.coTableBoxed, 
+.overlayWindowContent .MaskRenderer fieldset div.coTableBoxed { overflow-y:auto; }
+.cotable.tablescroll_foot { float:right; clear:both; }
+
+/* special style for coFilter of spo table within overlay */
+.overlayWindow .overlayWindowContent #spo-vorl-elements .cotable th:not(:first-child) div.coFilter:last-child { right:0px; width:auto; background: none; }
+
+/* spo config table */
+#idVorConfTable > tbody > tr > td > div  span { padding-right: 4px; }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+   #pageContent .MaskRenderer div.coTableBoxed { overflow-y: auto; padding-right: 18px;  }
+}
+
+@media all and (min-width:0\0) and (min-resolution: .001dpcm) {
+   /* IE9 speicifc go below */
+   #pageContent .MaskRenderer div.coTableBoxed { coloe:red\9; overflow: auto\9; padding-right: 18px\9;  }
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* COMask */
+/* ------------------------------------------------------------------------- */
+
+.toolBarButton {
+  padding-top: 3px;
+}
+
+
+.taExpandable
+{
+  overflow: hidden;
+  /*height: 1.4em;*/
+  padding-right: 8px;
+}
+
+.taMinimized
+{  
+  background: white url(/tumprod/img/taminimized.gif) no-repeat scroll right bottom; 
+}
+
+select{ margin-top: 2px; margin-bottom: 2px; margin-left: 2px; } /* 2px */
+
+select[disabled] {
+  background-color: white;
+  border: 1px solid lightGray;
+}
+
+input[type="text"][disabled] {
+  background-color: white;
+  border: 1px solid lightGray;
+}
+
+.MaskLayoutContainer {
+  border: 0px;
+}
+  
+  fieldset.Mask {
+    border-width: 1px;
+    border-color:#c8c8dd;
+    border-style:solid;    
+    vertical-align: top;
+    margin: 0.5em;
+    display: inline;  
+
+    /* <agu: optimized> */
+    margin: 0.1em;  
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-bottom: 0.2em;
+   
+    margin-left: 0.3em;
+    line-height: 1.1em;
+    margin-bottom: 0.5em;
+    margin-right: 0.3em; 
+    
+    -moz-border-radius: 6px; 
+    border-radius:6px; 
+    /* margin-top: 0.6em; safari braucht hier mehr abstand */    
+  }
+
+  
+  fieldset.MaskS {
+    border-width: 1px;
+    border-color:#c8c8dd;
+    border-style:solid;    
+    vertical-align: top;
+    margin: 0.5em;
+    /*display: inline;*/ 
+
+    /* <agu: optimized> */
+    margin: 0.1em;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-bottom: 0.2em;
+    margin-left: 0.3em;
+    line-height: 1.1em;
+    margin-bottom: 0.5em;
+    margin-right: 0.3em;
+    
+    -moz-border-radius: 6px;  
+    border-radius: 6px;
+    /* margin-top: 0.6em; safari braucht hier mehr abstand */    
+  }  
+/* --------------------------------------------------------- */  
+/* --- Anpassungen coMASK Container Layout 28.10.2010 DE --- */
+fieldset.MaskS, fieldset.Mask {
+  padding:0px;
+  background-color: #FCFCFE;
+  margin:0.667em;    
+}
+
+*+html fieldset.MaskS,
+*+html fieldset.Mask {
+  border-top:0px;
+}
+
+fieldset.MaskS > .MaskSpacing, fieldset.Mask > .MaskSpacing {
+  padding:8px;
+}
+
+/* --------------------------------------------------------- */  
+/* --- Anpassungen coMASK Container Layout 14.07.2014 DE --- */
+body fieldset { 
+border-radius: 0.2em; 
+background: #f1f1f1: 
+border-style:none;
+border: 1px solid #a8a8a8;
+}
+body fieldset legend {
+padding: 0 0.5em 0.25em 0.5em;
+white-space: nowrap;
+}
+fieldset > table.coBB,
+fieldset > table.coBB > tbody > tr > td.coBBContent > table.MaskSpacing {
+  width: 100%;
+}
+
+
+/* --- Fieldset within Forms without nested MaskLabel Styles --- */
+.innerFieldsetWithNoMaskStyle { 
+background: #FCFCFE; border-color: #a8a8a8; 
+border-style: solid; border-width: 1px; 
+border-radius: 0.2em; padding: 0.1em 0.25em 0.25em 0.1em; 
+} 
+.innerFieldsetWithNoMaskStyle .MaskLabel {
+background-color: #FCFCFE; 
+padding-left:0.1em;
+}
+
+
+/* --------------------------------------------------------- */  
+
+  /*------------------------*/
+  /* deprecated! do not use!*/
+  fieldset.MaskNonFload{
+    border-width: 1px;
+    border-color:#c8c8dd;
+    border-style:solid;    
+    vertical-align: top;
+    margin: 0.5em;
+
+    /* <agu: optimized> */
+    margin: 0.1em;
+    padding: 0.1em;
+    margin-left: 0.3em;
+    line-height: 1.1em;
+  }
+  /*------------------------*/  
+
+
+  div.MaskNonFload{     
+    vertical-align: top;
+    display: inline;
+    clear: both;  
+    margin: 0px;
+    padding:0px;
+    margin-left: 0.3em;
+  }  
+
+
+  table.MaskNonFload{  
+    vertical-align: top;
+    margin: 0px;
+    padding:0px;  
+  }
+  
+  td.MaskNonFload{  
+    vertical-align: top;
+    margin: 0px;
+    padding:0px;  
+  }
+  
+  legend.Mask {
+    margin: 0.5em;
+    margin-left: 0.3em;
+    margin-top: 0.3em;
+    margin-bottom: 0.2em;
+    padding: 0.2em;  
+    border:1px solid #c8c8dd;
+    color: #0a0a0a;
+    font-size: 0.9em;
+    text-align:left;
+    background-color: #fff; /* <agu> */
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+*+html legend.Mask {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.3em;
+    margin-bottom: 0.2em;
+    padding: 0.2em;  
+    border:1px solid #c8c8dd;
+    color: #0a0a0a;
+    font-size: 0.9em;
+    text-align:left;
+    background-color: #fff; /* <agu> */
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+/* --------------------------------------------------------- */  
+/* --- Anpassungen coMASK Container Layout 28.10.2010 DE --- */
+legend.Mask{
+  width:100%;
+  padding: 0.167em 0;
+  text-indent: 0.667em;
+  margin:0px -1px;
+  background-image: url(/tumprod/img/comask_container_header.jpg);
+  background-repeat: repeat-x;
+  background-color: #EEE;
+  -moz-border-radius:6px 6px 0 0;  
+  border-radius:6px 6px 0 0;
+}
+
+*+html fieldset.MaskS {
+  padding:0;   
+  margin:0;  
+  margin-top: 0.667em;
+  margin-right: 1.667em;
+  margin-left: 1.667em;
+}
+
+
+legend.Mask > * {
+  margin-right: 0.667em;  
+}
+
+legend.Mask img {
+  vertical-align: middle;
+}
+*+html legend.Mask {    
+  padding:0.167em 0;
+  margin:0px -16px;        
+}
+/* --------------------------------------------------------- */  
+
+ legend.Mask:target {
+     opacity: 0.5;              /* nur FF */
+     filter:alpha(opacity=50);  /* nur IE */
+     z-index: 7;
+  }
+
+  label.Mask {
+    color: #0a0a0a;
+    font-size: 0.9em;
+    text-align:right;
+    padding-right: 4px;
+    padding-right: 0.1em;
+    padding-left: 0.1em;
+    margin-right: 4px;
+/*    width:100%;*/
+  }  
+/* --------------------------------------------------------- */  
+/* --- Anpassungen coMASK Container Layout 28.10.2010 DE --- */
+label.Mask {
+  padding-left: 0.4em;  
+  padding-right: 0.4em;   
+  margin-right: 0;
+}  
+/* --------------------------------------------------------- */  
+
+  table.Mask{
+    margin: 0px;
+    empty-cells:hide;
+    min-width:10px;
+    white-space:nowrap;        
+    overflow:auto;
+    border: 0;
+    border-spacing: 0;
+    padding: 0;
+  }    
+
+  br.Mask{  /* IE Render Mode*/
+    clear: left;
+    font-size: 0px;
+  }
+
+  div.MaskBackground{
+    background-color: #F0F0EE;
+    border: 1px solid #c8c8dd;
+    text-indent: 0px;
+    text-align: left;
+    float: none;
+    padding: 0.4em; /* Abstand von form zum ersten container */
+    display: inline; /* IE */
+  }
+  
+  /** for modern browsers **/
+  html>/**/body div.MaskBackground {
+    display: table; /** not supported by IE **/
+  }
+  
+  div.MaskContent{
+    display: table-row;
+  }
+  
+  div.MaskData{
+    display: table-cell;
+  }
+
+  td.MaskLabel {
+    background-color: #c8c8dd;
+    white-space: nowrap;
+    text-align:right;
+    vertical-align: top;
+    overflow:visible;
+    line-height: 1.5em;
+    /* line-height: 1.5em; */
+
+    padding: 0.2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-left: 0.3em;
+  }
+  
+  td.MaskData {
+    white-space: nowrap;
+    text-align:left;      
+    overflow:visible;
+    padding: 0px;
+    padding-left: 1px;
+    line-height: 1.5em;
+  }
+
+  div.MaskButtonBar{  
+    margin-top: 5px;
+    border:1px solid #c8c8dd;
+    width:100%;
+    display: table ! important;
+  }
+
+  div.MaskButtonBarLeft{  
+    vertical-align: top;
+    text-align:left ! important;
+    white-space: nowrap;
+    display: table-cell ! important;
+    padding:0.3em; /* f�rs Abstandhalten der Buttons zu ihrem Border */
+  }
+
+  div.MaskButtonBarRight{  
+    vertical-align: top;
+    text-align:right ! important;
+    white-space: nowrap;       
+    display: table-cell ! important;  
+    float: right ! important; 
+    padding:0.3em; /* f�rs Abstandhalten der Buttons zu ihrem Border */
+  }
+
+  table.MaskButtonBar{
+    margin-top: 5px;
+    border:1px solid #c8c8dd;
+    width: 100%;
+  }
+
+  td.MaskButtonBarLeft{  
+    text-align:left;
+    white-space: nowrap;   
+    padding:0.1em; /* f�rs Abstandhalten der Buttons zu ihrem Border im IE */
+  }
+
+  td.MaskButtonBarRight{
+    text-align:right;
+    white-space: nowrap;       
+    padding:0.1em; /* f�rs Abstandhalten der Buttons zu ihrem Border im IE */
+  }  
+
+/* --------------------------------------------------------- */  
+/* --- Anpassungen coMASK Container Layout 28.10.2010 DE --- */
+div.MaskButtonBar, .MaskButtonBar, table.MaskButtonBar{
+  border:none;
+}
+/* --------------------------------------------------------- */  
+
+  
+  div.MaskCallBack{
+    display: block;
+    height: 100%;
+    min-width: 100%;
+    overflow:auto;
+    position:relative;
+  }
+    
+  img.MaskDate{
+    vertical-align: middle;
+    cursor: pointer ;  
+    border:0px;
+
+  }  
+
+
+/* 
+ * IE DIV Bugfix <agu, 2008-08-19>
+ */
+
+  div.Mask {     
+    vertical-align: top;
+    display: inline;
+    margin: 0px;
+    padding:0px;
+    float: left; 
+    margin-left: 0.3em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+  }  
+  
+  legend span.Mask {
+   display: block;
+        /** width: 100%; */
+   white-space:normal;
+
+  }
+ 
+  span.Mask {     
+    /** display: block; 
+    width: 100%;  */
+    white-space: normal;
+  }  
+  
+form.Width100 div.MaskData  > table{ width: 100%; }
+form.Width100 div.MaskData {  display: block; }
+form.Width100 div.MaskContent  > table.coBB { width: 100% }
+form.Width100 div.MaskBackground  { width: 100%; padding: 0em; }
+/*form.Width100 div.tab_container  table.MaskSpacing {width:100%}*/
+form.BackgroundNone div.MaskBackground  { background: none; border: none; }  
+  
+div.noBorder td {
+    border: none !important;
+    }
+
+.rightMargin {
+    margin-right: 6px;
+}
+  
+/* ------------------------------------------------------------------------- */ 
+/* MaskRenderer */
+/* ------------------------------------------------------------------------- */  
+  
+  td.MaskRenderer
+  {
+    padding: 0em !important;
+  }
+  
+  table.MaskSpacing
+  {
+    border-spacing: 0em;
+  }
+  
+  table.MaskElement td
+  {
+    border: 0em none !important;
+  }
+  
+/* fixing nested table for invisible labels when putting multiple formfields into one tr */
+fieldset table.MaskSpacing td.MaskRenderer.top div.MaskS td.MaskRenderer.top div.MaskS td.MaskRenderer.top td td.MaskRenderer.MaskLabel, 
+fieldset.MaskS table.MaskSpacing td.MaskRenderer table.MaskSpacing td.MaskRenderer.MaskLabel { 
+border:none;
+border-collapse: collapse;
+border-image-width:0;
+border-spacing: 0px;
+border-style:none;
+box-sizing:content-box;
+min-width:0px; 
+width:auto; 
+padding:0;
+margin:0;
+overflow:hidden;
+width:auto;
+}
+td.MaskRenderer.MaskLabel label.Mask.invisible {
+padding:0;margin:0;
+position:relative;
+display:none;
+}
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {*/
+/* bug in chrome/safari: table-cell always minimum 1px */
+/* no bugfix yet available other than display: none */ 
+/*fieldset.MaskS table.MaskSpacing > tbody > tr table.MaskSpacing > tbody > tr table.MaskSpacing > tbody > tr table.MaskSpacing > tbody > tr > td.MaskRenderer table.MaskSpacing > tbody > tr table.MaskSpacing > tbody > tr table.MaskSpacing > tbody > tr > td.MaskRenderer table.MaskSpacing > tbody > tr table.MaskSpacing > tbody > tr > td.MaskRenderer.MaskLabel { 
+display:none;
+} 
+}*/
+table tbody td.MaskRenderer { 
+line-height:22px; 
+}
+table tbody td.MaskRenderer  .small, table tbody td.MaskRenderer  small {
+line-height:1em;
+}
+table tbody tr.mask td,
+table.MaskSpacing tr td.MaskRenderer.MaskLabel {
+padding: 5px 2px;
+vertical-align: top;
+box-sizing:content-box;
+line-height:22px;
+}
+label.Mask {
+display: inline-block;
+margin-top:1px;
+padding-top:2px;
+}
+.MaskRenderer > img, .MaskRenderer > a { margin-top: 2px; display: inline-block; /*because of line-height:22px*/}
+.MaskRenderer > a.nounderline > img { vertical-align: middle; }
+
+/* Form Styles Modernization for MaskRequired */
+
+html body table tr td .MaskRequired,
+html body table tr td .MaskOneOfGroupRequired, 
+html body table tr tdinput.Validator.MaskOneOfGroupRequired,
+html body table tr td .required, 
+html body table tr td input.required, 
+html body table tr td select.required { 
+border-color: #FFC900; 
+}
+div.as_cb_required  { /*for select 2*/
+border: 0px;
+border-radius: 4px;
+box-shadow: 0px 0px 0px 1px #FFC900;
+}
+
+/* Form Styles Modernization for inputs and selects */
+table tr td select,  
+table tr td input[type="text"], table tr td input[type="email"], 
+table tr td  input[type="password"], table tr td input[type="number"], 
+table tr td input[type="date"], table tr td input[type="datetime"], 
+table tr td input[type="range"], table tr td input[type="time"], 
+table tr td input[type="tel"], table tr td input[type="search"] {
+/*color: #444;*/
+border:1px solid #aaa; /* required other color */
+line-height: 22px;
+height:22px;
+box-sizing: border-box;
+border-radius: 2px;
+background-clip: padding-box;
+background-color: #fff;
+/*margin: 2px;*/
+font-size:13px;
+padding: 2px 2px 1px 2px;
+}
+table tr td select {
+height:auto;
+min-height:22px;
+}
+.overlayWindow .coBBContent div.MaskData td.MaskRenderer > select { /* max-width for selects in overlay content */
+max-width:30em; 
+overflow: auto;
+text-overflow:ellipsis;
+}
+table tr td textarea {
+border:1px solid #aaa; /* required other color */
+font-size:13px;
+padding: 2px 2px 1px 2px;
+box-sizing: border-box;
+border-radius: 2px;
+background-clip: padding-box;
+background-color: #fff;
+min-height:22px;
+}
+table.coBB tr td.MaskRenderer select,
+table.MaskSpacing tr td select,
+#pageContent table select {
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+background-image: linear-gradient(to top, #eee 0%, #fff 50%);
+padding-right:0.2em;
+}
+table.MaskSpacing tr td input[type="checkbox"], 
+table.MaskSpacing tr td input[type="radio"] {
+height:auto;
+}
+/* additional disabled and readonly styles*/
+select[disabled],select[readonly], 
+textarea[disabled],textarea[readonly], 
+input[disabled],input[readonly]{
+cursor: not-allowed;
+background-color: #eee;
+opacity: 1;
+}
+input[readonly], textarea[readonly] { cursor: not-allowed; }
+body table tr td input[readonly]:focus, input[readonly]:focus { /* do not show focus on readonly fields and enhance readability */
+border: 1px solid #aaa; 
+background-color: #fff; 
+opacity: inherit;
+-webkit-box-shadow: none; box-shadow: none; 
+}
+
+/* focus styles for forms */
+table tr td select:focus, table tr td textarea:focus,
+table tr td input[type="text"]:focus, table tr td input[type="email"]:focus,
+table tr td  input[type="password"]:focus, table tr td input[type="number"]:focus, 
+table tr td input[type="date"]:focus, table tr td input[type="datetime"]:focus, 
+table tr td input[type="range"]:focus, table tr td input[type="time"]:focus, 
+table tr td input[type="tel"]:focus, table tr td input[type="search"]:focus  {
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+textarea[aria-required=true]:focus, textarea.MaskRequired:focus, 
+input[aria-required=true]:focus, input.MaskRequired:focus {
+border-color: #66512c;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b;
+}
+textarea[aria-invalid=true]:focus, input[aria-invalid=true]:focus {
+border-color: #843534;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}
+table tr td input[type="file"]:focus, table tr td input[type="radio"]:focus,
+table tr td input[type="checkbox"]:focus {
+outline: thin dotted;
+outline: 5px auto -webkit-focus-ring-color;
+outline-offset: -2px;
+}
+#pageContent form#idEditZugangMask table.coBB div.MaskData td.MaskRenderer input[type="file"] {
+max-width: 128px; 
+wdith:128px;
+color: transparent;
+margin:0px 2px;
+/*position: absolute;*/
+}
+/* input type file for zugaenge with ie pseudo selectors ::-ms-browse and ::-ms-value not working therefore spec. max-width */
+input#idNewIconS, input#idNewIconM, input#idNewIconL {
+max-width: 18em;
+}
+/*div.MaskData td.MaskRenderer input[type="file"]:before{content: "...";color: black;}*/
+::-moz-placeholder { 
+color: #777;
+opacity: 1;
+}
+:-ms-input-placeholder , ::-webkit-input-placeholder {
+color: #777;
+}
+/* Form Error Validation Styles */
+*[aria-invalid=true], html body table tr td *[aria-invalid=true], 
+#pageContent .MaskRequired[aria-invalid=true], #pageContent table.CBgroup[aria-invalid=true], 
+#pageContent select[aria-invalid=true], #pageContent table tr td input[aria-invalid="true"], 
+#pageContent table tr td .invalid, #pageContent table select[aria-invalid=true] { 
+border: 1px solid #f70146;
+background: #ffebeb;
+}
+table.coBB tr td.MaskRenderer select[aria-invalid=true], table.MaskSpacing tr td select[aria-invalid=true], 
+#pageContent table tr td select[aria-invalid=true] { 
+background-image: none;
+filter: none;
+background: #ffebeb;
+}
+.cocombobox.invalid { box-shadow: 0px 0px 0px 0px; }
+.cocombobox.invalid a { background: #ffebeb; }
+.MaskRenderer .validateError, #pageContent div.validateError, 
+.has-error, label.validateError, .Mask.validateError {
+font-weight: normal;
+border-color: #f70146;
+}
+div.as_cb_required.validateError {
+box-shadow:0px 0px 0px 1px #f70146;
+}
+/*.errorIconAnchor and input[aria-required="true"] styling done via framework! */
+
+/* ------------------------------------------------------------------------- */ 
+/* DatePicker */
+/* ------------------------------------------------------------------------- */
+/* The main calendar widget.  DIV containing a table. */
+
+.calendar {
+  position: relative;
+  display: none;
+  font-size: 0.8em;
+  cursor: default;
+  font-family: arial,verdana,sans-serif;
+  z-Index: 1001;
+}
+.calendar table {
+  border: 0px;
+  cursor: default;
+  font-family: arial,verdana,sans-serif;
+}
+.calendar .button {
+  text-align: center;
+}
+.calendar thead .title { 
+  font-weight: bold;
+  text-align: center;
+}
+.calendar thead .headrow { }
+.calendar thead .daynames { }
+.calendar thead .name { 
+  text-align: center;
+}
+.calendar thead .weekend { }
+.calendar thead .hilite { }
+.calendar thead .active { }
+.calendar tbody .daysrow .day {
+  width: 16px; 
+  box-sizing: content-box; 
+  text-align: right;
+}
+.calendar tbody .day.othermonth { }
+.calendar tbody .day.othermonth.oweekend { }
+.calendar table .wn { }
+.calendar tbody .rowhilite td { }
+.calendar tbody td.active { }
+.calendar tbody td.selected { 
+  font-weight: bold;
+}
+.calendar tbody td.disabled { 
+   color: GrayText; 
+}
+.calendar tbody .emptycell { 
+  visibility: hidden;
+}
+.calendar tbody .emptyrow { 
+  display: none;
+}
+.calendar tfoot .footrow {
+  white-space: normal;   
+  word-wrap: break-word;
+  width: 224px;
+}
+.calendar tfoot .ttip {
+  font-size:1em;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.calendar tfoot .hilite { 
+  border-top: 0px;
+  background: #e4e0d8;
+}
+.calendar tfoot .active { 
+  padding: 2px 0px 0px 2px;
+  border: 0px;
+}
+
+/* Combo boxes (menus that display months/years for direct selection) */
+.calendar .combo {
+  position: absolute;
+  display: none;
+  width: 4em;
+  top: 0px;
+  left: 0px;
+  cursor: default;
+  font-size: 0.9em;
+  padding: 1px;
+  z-index: 100;
+}
+.calendar .combo .label,
+.calendar .combo .label-IEfix {
+  text-align: center;
+  padding: 1px;
+}
+.calendar .combo .label-IEfix {
+  width: 4em;
+}
+.calendar .combo .active {
+  padding: 0px;
+  border: 1px solid #000;
+}
+.calendar .combo .hilite, 
+.calendar .combo .label:hover { 
+  /*background: Highlight; */
+  color: HighlightText;
+  background:#f1f1f1; 
+  border:1px solid #111; 
+  margin: -1px; 
+}
+.calendar .combo { 
+  border: 1px solid #f1f1f1; 
+  border-radius:2px; 
+  padding:2px; 
+  background: #fff; 
+}
+.calendar td.time {
+  padding: 1px 0px;
+  text-align: center;
+  white-space: nowrap;
+  font-size:12px;
+}
+.calendar td.time .hour,
+.calendar td.time .minute,
+.calendar td.time .ampm {
+  padding: 0px;
+}
+.calendar tr.time .button {
+   border:1px solid #A0A0A0;
+   line-height: 1.2em;
+   min-height: 17px;
+   box-sizing: content-box;
+   font-size: 12px;
+   padding: 1px 0.65em;
+}
+.calendar tr.time .button:hover,
+.calendar tr.time .button.hilite ,
+.calendar tr.time .button.hilite div {
+   background-color:#fdfdfd; 
+}
+.calendar td.time .ampm {
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* Style Extensions for rendering similar to new one and renewed pu's one.
+/* (Compare also .datepicker styles in css_sys_w_m.css)
+/* ------------------------------------------------------------------------- */ 
+body table.mask,
+.calendar table,
+table.datePickercpBorder { 
+background: #F1F1F1;
+border-collapse: separate;
+border: 1px solid #777;
+border-radius: 0.2em;
+box-shadow: none;
+padding:0.5em ;
+border-spacing: 0px;
+font-family: Arial, sans-serif;
+font-size; 12px;
+}
+
+.calendar {
+background: transparent;
+border:0px;
+box-shadow: none;
+}
+.calendar thead, 
+.calendar thead td  { 
+font-size:13px; 
+}
+.calendar thead td, 
+.calendar tfoot td {
+background: inherit; 
+border: none;
+background-color: #f1f1f1;
+}
+.calendar table thead tr .day.weekend,
+.calendar table thead tr .oweekend.day,
+.calendar table tbody tr .day.weekend,
+.calendar table tbody tr .oweekend.day,
+.calendar tbody tr.daysrow .day.weekend { 
+color: #8B9ED2 ; /*#778;*/ 
+}
+.calendar tbody tr.daysrow .day { 
+color: #23238E;  
+}
+.calendar table tbody tr .othermonth.day { 
+font-size:0.9em;
+color:#c4c4c4 !important;
+}
+.calendar > table > tbody tr:first-child td,
+.calendar > table > tfoot tr.footrow td, 
+.calendar > table > tbody tr:first-child td,
+.calendar > table > tfoot tr.footrow td {
+border-top: 0px solid #c0c0c0;
+border-bottom: 0px solid #c0c0c0;
+}
+.calendar tbody td.day:hover { 
+color: #fff;
+background: #34346c;
+font-weight: bold;
+}
+.calendar table td, .calendar table td {
+border: 0px;
+display: table-cell;
+padding: 1px 6px 1px 4px;
+box-sizing: content-box;
+}
+.calendar table tbody tr.daysrow td.day {
+cursor: pointer;
+}
+.calendar table tbody tr.daysrow td.day.wn {
+cursor: default;
+color: #c4c4c4;
+}
+.calendar thead .button div[unselectable="on"] {
+color: #23238E; 
+font-size:12px;
+cursor: pointer;
+}
+.calendar thead tr.headrow,
+.calendar thead tr.headrow td,
+.calendar thead tr.headrow td:hover {
+border:0px;
+margin:0px;
+height: 18px; 
+max-height:18px;
+line-height: 18px;
+overflow: hidden;
+}
+.calendar thead tr.headrow td.button,
+.calendar thead tr.headrow td.button.hilite,
+.calendar thead tr.headrow td.button.nav,
+.calendar thead tr.headrow td.button.nav > div:hover { 
+margin:0; 
+padding:0; 
+}
+.calendar thead td.day,
+.calendar tbody td.day {
+padding: 2px 6px 2px 4px;
+display:inline-block;
+box-sizing: content-box;
+display: table-cell;
+line-height:16px;
+height:16px;
+width: 16px;
+}
+.calendar thead .daynames td.name.day,
+.calendar thead .daynames td.name.day.hilite,
+.calendar thead .daynames td.name.day:hover {
+width:14px;
+padding: 1px 6px 1px 4px;
+min-width:14px;
+max-width: 14px;
+display: table-cell;
+box-sizing: content-box;
+}
+.calendar thead tr.headrow td.button.hilite { 
+font-weight:bold; 
+}
+.calendar thead tr.headrow td.button.nav > div:hover { 
+font-size:14px; margin-top:0;  
+}
+.calendar thead .daynames td,
+.calendar thead .daynames td:hover {
+width:18px;
+box-sizing: content-box;
+overflow: hidden;
+}
+.calendar td.day.selected,
+.calendar tbody td.day.today,
+.calendar tbody td.day.selected  {
+background: #f1f1f1;
+border: 0px solid #23238E;
+color: black;
+font-weight: bold;
+}
+.calendar td.day.selected:hover,
+.calendar td.day.today:hover,
+.calendar tbody td.day.selected:hover  {
+background: #23238E;
+color: #fff; 
+font-weight: bold;
+border:none;
+}
+.calendar tbody td.day {
+background: #fff;
+}
+.calendar tbody td.wn {
+background:#f1f1f1;
+}
+.calendar tbody td.day {  /* .calendar td.weekend ehemals in rot, nun in grau */
+color: #23238E;
+border: none; 
+height:18px;
+line-height:18px;
+width:16px;
+}
+.calendar tbody tr.daysrow > td.day:first-child:hover { /* Kalenderwochenspalte */
+font-weight:normal;
+padding-left:0;
+}
+.calendar tfoot .footrow .ttip {
+height: 2.6em;
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* Buttons */
+/* ------------------------------------------------------------------------- */
+  
+ a.commandButton, a.commandButton:visited, a.commandButton:link,
+ button,  input[type="button"], input[type="submit"]
+ {
+    font-family:Arial,Helvetica,sans-serif; 
+    font-size:0.9em;
+    font-size:1em;
+    text-decoration:none;    
+    font-weight:normal;    
+    display: inline-block;
+    overflow:visible;
+    cursor:pointer;    
+    margin:1px 7px 1px 0; 
+    padding:2px 13px 3px 10px;     
+    background-color:#f5f5f5;
+    border:2px solid #dedede;
+    border-bottom-color:#A0A0A0;
+    border-right-color:#A0A0A0;
+    color:#000000;
+    white-space:nowrap;    
+}
+
+ a.commandButton:active, 
+ button:active, input[type="button"]:active, input[type="submit"]:active  
+ {
+  border:2px solid #dedede;
+  border-top-color:#A0A0A0;
+  border-left-color:#A0A0A0; 
+}
+
+ a.commandButton:hover, 
+ button:hover, input[type="button"]:hover, input[type="submit"]:hover  
+{
+    background-color:#fdfdfd; 
+}
+
+
+/*Firefox*/
+
+/*button[disabled], input[disabled]*/
+button[disabled], input[type="button"][disabled], input[type="submit"][disabled]
+{
+    color:#a7a6aa;
+    border:2px solid #dedede !important;
+    border-bottom-color:#A0A0A0 !important;
+    border-right-color:#A0A0A0 !important;
+    background-color:#f5f5f5 !important;
+} 
+
+
+/* FireFox 2 */
+button,x:-moz-any-link {
+  /*color: green; /* FIXXME: nur als TEST */
+  padding:0px 13px 3px 10px;
+}
+
+/* IE 7 */
+*+html button,
+*+html input[type="button"],
+*+html input[type="submit"]
+
+{
+/*  color: red; /* FIXXME: nur als TEST */
+  padding:2px 13px 0px 10px; 
+  display:-moz-inline-box; 
+/*  padding-top:0.5em;*/
+}
+
+.menuEntryColor
+{
+  text-decoration: none;
+  color:#000000 !important;
+  background-color:#F1F1F1;
+}
+
+
+/*  End input/command */
+
+/* Disabled Anchors */
+   a.disabled 
+,  a.disabled:hover
+,  a.disabled:visited 
+,  a.disabled:link
+,  a.disabled:active{
+     color:#a7a6aa;
+    cursor:default;
+}
+
+
+   a.disabled img
+   {
+      opacity:0.4;              /* nur FF */
+      filter:alpha(opacity=40); /* nur IE */
+   }
+
+
+/* Page Footer BEGIN*/
+
+ .pageFooter {
+    clear: both;
+ }
+/* Page Footer END */
+
+/* ------------------------------------------------------------------------- */ 
+/* ICON BEGIN*/
+/* ------------------------------------------------------------------------- */ 
+
+ .IEImageInactive {
+    filter:alpha(opacity=40);
+ }
+ 
+.ImageInactive {
+    opacity:0.4;
+ } 
+
+/* ------------------------------------------------------------------------- */ 
+/* Klasse f�r Icon-api f�r TextOverlays                            */
+/* ------------------------------------------------------------------------- */ 
+.imageTextOverlay, .imageTextOverlayIE {
+  position: relative;
+  top: -0.5em;
+  left: -2.65em;
+  font-size: 0.7em; 
+}
+span > .imageTextOverlay,
+div > .imageTextOverlay {
+  position: static;
+  /*margin-top: -0.5em;*/
+  margin-left: -2.65em;
+  font-size: 0.7em; 
+}
+a > .imageTextOverlay {
+  position: relative;
+  top: -0.5em;
+  left: -2.65em;
+  font-size: 0.7em; 
+}
+span > .imageTextOverlayIE, 
+div > .imageTextOverlayIE {
+  position: static;
+  /*margin-top: -0.5em;*/
+  margin-left: -2.65em;
+  font-size: 0.7em; 
+  /*zoom: 1;*/ 
+}
+a > .imageTextOverlayIE {
+  position: relative;
+  top: -0.5em;
+  left: -2.65em;
+  font-size: 0.7em; 
+}
+ 
+/* ------------------------------------------------------------------------- */  
+/* ICON END */
+/* ------------------------------------------------------------------------- */ 
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* ChoiceBox: coCheckBoxGroup/coRadioButtonGroup
+/* ------------------------------------------------------------------------- */
+.CBgroup {
+  border-spacing: 1px;
+  border: 1px dotted gray;
+  background-color: white;
+  /*padding-bottom: 1px;*/
+  /*margin-left: 2px;*/
+  padding-right: 2px;
+  line-height: 20px;
+}
+
+td.CBoptionGroup
+{
+  font-weight: bold;
+  font-style: italic;
+  white-space: nowrap;
+}
+td.CBoptionMarker
+{
+  width: 10px;
+  vertical-align: top;
+  padding-top: 2px;
+}
+td.CBoptionTextDisabled
+{
+  color: #a7a6aa;
+}
+
+tr.CBoptionInvisible > td > input {
+  display: none;
+}
+
+td.CBOptionText
+{
+   vertical-align: top;
+   /*padding-top: 4px;*/
+}
+
+
+tr.HideText td.CBOptionText
+{
+   visibility: hidden;
+}
+
+tr.noCBoptionMarkerBorder td {
+  border: none 0px !important;
+}
+
+.noBackGroundColor
+{
+   background-color: transparent;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* Window and Overlays */
+/* ------------------------------------------------------------------------- */
+
+.windowNavTd
+{
+  min-width: 200px;
+}
+
+table.windowContent>tbody>tr>td
+{
+  vertical-align: top;
+  border: 0px;
+}
+
+.overlayBackground{
+   background-color:#000;
+   
+}
+
+.overlayWindow
+{
+  overflow: hidden;  
+  border: 1px #000 solid;
+  font-family: Arial,Helvetica,sans-serif;
+  -moz-box-shadow: 5px 5px 3px #888;
+  -webkit-box-shadow: 5px 5px 3px #888;
+  box-shadow: 5px 5px 3px #888;  
+}
+
+.overlayWindowStructur
+{
+  width:100%;
+  height:100%;
+}
+
+.overlayWindowLoading
+{
+  text-align: center;
+  padding:50px;
+  visibility:hidden !important; /* not used - redundant to pageLoading !!! */
+}
+
+.overlayWindowHeader
+{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #FFF;
+  width: 100%;
+  height: 21px;
+}
+
+.overlayWindowTools
+{
+  float:right;
+}
+
+.overlayWindowTitle
+{
+  font-weight: bold;
+  color: black;
+  border: 1px #000 solid;
+  border-top: none;
+  border-left: none;
+  padding: 0.2em;  
+  padding-top: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  line-height: 21px;
+  background-color: white;
+  display: inline;
+  font-size: 1em;
+  cursor: move;
+}
+
+.overlayWindowSubTitle
+{
+  font-weight: bold;
+  color: black;
+  font-size: 1em;
+  border-bottom:1px solid #CCC;
+  width: 100%;
+}
+
+.overlayWindowContent
+{
+  padding:12px;
+  background-color: white;
+  overflow: auto;  
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  margin-top: 21px;
+  padding-top: 5px;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* coOverlay ToolTip */
+/* ------------------------------------------------------------------------- */
+
+.overlayToolTip{
+    cursor:help;
+    text-decoration:none;
+}
+
+.overlayTTContainer{
+  background-color:#ffffe1;
+  font-size: smaller;
+  border:0.1em solid black;
+  padding: 3px;
+  z-Index: 9999;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+.overlayTTZIndex
+{
+ z-Index: 9999;
+}
+
+span.overlayToolTip{
+    border-bottom:0.1em dashed;
+}
+
+a.overlayToolTip{
+  text-decoration: underline;
+  outline:none;
+  cursor: pointer;
+}
+
+/* RH, 31.01.2011, Tooltop-Info-Icons: keine Outline bei Icons als Tooltip-Anchor, passt nur bei Text; Abstand zur linken Seite */
+a.overlayTooltipIcon {
+    outline-style: none;
+    margin-left: 0.5em;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* Mask Validator */
+/* ------------------------------------------------------------------------- */
+.MaskRequired{
+    border: 1px solid #FFC900;
+}
+  
+input[type="checkbox"].MaskRequired {
+  outline: 1px solid #FFC900;
+  /*border: none;*/ /*IE*/
+}  
+
+input[type="radio"].MaskRequired {
+  outline: 1px solid #FFC900;
+}  
+
+a.MaskRequired, button.MaskRequired {
+  outline: #FFC900 solid 0.1em;
+}
+
+.MaskOneOfGroupRequired{
+ border: 1px dotted #FFC900;
+}
+
+select.MaskOneOfGroupRequired{
+ border: 1px dotted #FFC900;
+}
+
+.MaskNofMChoiceGrpRequired {
+ border: 1px dotted #FFC900;
+}
+
+.validatorFormatString
+{
+ margin-top: 0.1em;
+ margin-bottom: 0.1em;
+}
+.validatorFormatString.s {
+  font-size: 0.7em; 
+  margin: 0 0.25em 0 0; 
+  line-height:1.2em;
+}
+
+
+/* ------------------------------------------------------------------------- */
+.draggedRow td
+{ 
+  background-color: #DDFFDD;
+  font-weight:bold;
+}
+
+.draggedRow th
+{ 
+  background-color: #DDFFDD;
+  font-weight:bold;
+}
+
+
+.solidlinemenu{
+   margin: 0;
+   padding: 0;
+   font: bold 13px Arial; 
+   height: 21px;
+   background: url(/tumprod/img/solidblock.jpg) center center repeat-x;
+   white-space: nowrap;
+}
+
+.solidlinemenu .coNavSectionTitle { display: none; }
+.solidlinemenu .coNavGroupTitle:after { content: " >>"; }
+.solidlinemenu ul { display: inline; } 
+.solidlinemenu ul li {  display: inline; }
+.solidlinemenu div{ display: inline; }
+
+.solidlinemenu li a{
+   color: black;
+   padding: 2px 11px;
+   text-decoration: none;
+   border-right: 1px solid #ababab;
+   margin: 0px;
+}
+
+.solidlinemenu li a:hover { color: red; }
+
+
+/* ------------------------------------------------------------------------- */ 
+/* Tree */
+/* ------------------------------------------------------------------------- */
+
+  /* Turn off list bullets */
+  ul.mktree, ul.mktree ul , ul.mktree li { list-style-type: none; }
+  
+  /* Control how "spaced out" the tree is */
+  ul.mktree, ul.mktree ul , ul.mktree li { margin-left:0.8em; padding:0em; }
+  
+  /* Provide space for our own "bullet" inside the LI */
+  li ul li ul li div.contentDiv { margin-left:0.1em; padding:0em; }
+  
+  /* Sublists are visible or not based on class of parent LI */
+  ul.mktree  li.liClosed  ul { display:none; }
+   
+  /* Fontsize */
+  /* Fontsize wird dynamisch in coTree gesetzt! */
+  /* Kann mit Parameter ein-/ausgeschaltet werden. */
+  
+  /* */
+  .bullet     { display: inline; }
+  .contentDiv { display: inline  }
+
+
+  /* Knoten */
+  a.treeNA{  cursor: pointer; text-decoration:none; }
+
+  /* Checkboxen */
+  ul.mktree    a.chkboxChecked        {  cursor: pointer; text-decoration:none;}
+  ul.mktree    a.chkboxUnchecked      {  cursor: pointer; text-decoration:none;}
+  ul.mktree    a.chkboxGrey           {  cursor: pointer; text-decoration:none;}
+  ul.mktree    div.chkboxDiv          { display: inline;}  
+  
+  
+  ul.cuexplist, ul.cuexplist ul , ul.cuexplist li { list-style-type: none; margin: 0; padding: 0; white-space: nowrap; }
+
+/* ------------------------------------------------------------------------- */ 
+
+/* ------------------------------------------------------------------------- */ 
+/* Custom Tree Anmelde Maske */
+/* ------------------------------------------------------------------------- */
+
+  .listAnmeldeContentDiv a         { color: black !important; 
+                                     font-size: 16px !important;
+                                     text-decoration: none !important;
+                                   }
+                           
+  .listAnmeldeEnabled .liBullet a  { color: #23238E !important;
+                                     font-weight: bold !important;
+                                     text-decoration: underline !important;
+                                   }
+                                   
+  .listAnmeldeDisabled .liBullet a { color: #A7A6AA !important;
+                                     font-weight: normal !important;
+                                     text-decoration: none !important;
+                                   }
+                       
+  .liBullet a:hover                { color: #D20000 !important;}
+
+/* ------------------------------------------------------------------------- */ 
+
+
+
+/* 
+ ***************************************************************
+ * AGU: �nderungen zum Standard CSS
+ * for: IE6/7, Opera, Firefox and Safari
+ ***************************************************************
+ */
+
+/* ************************************ */
+/*    Anchors & Buttons / Firefox   */
+/* ************************************ */
+
+a.commandButton, a.commandButton:link, a.commandButton:active, a.commandButton:visited {
+   margin: 0px;
+   margin-top: 1px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   line-height: 1.2em;
+   padding: 1px 0.65em; /* see also a.commandButton style expanstion below */
+}
+button {
+   margin: 0px;
+   margin-left: 0px;
+   margin-right: 0px;
+   line-height: 1.2em;
+   padding: 1px 0.65em;
+}
+button:hover {
+   background-color: #fdfdfd;
+}
+
+/* ************************************ */
+/*    Anchors & Buttons / IE            */
+/*    - FIXME: is this still needed?    */
+/* ************************************ */
+
+*+html button, 
+*+html button:hover, 
+*+html button:active, 
+*+html button:visited {
+   padding-top: 2px;
+   padding-top: 0px;
+   height: 2em;
+   padding-bottom: 1px;
+}
+*+html button:hover, 
+*+html button:active {
+   cursor: default;
+}
+*+html button:hover {
+   background-color: #fdfdfd;
+}
+
+*+html a.commandButton:hover {
+   background-color: #fdfdfd;
+}
+
+*+html a.commandButton, 
+*+html a.commandButton:link, 
+*+html a.commandButton:visited {
+   /* height: 1.5em; */
+   line-height: 1.4em;
+   margin-top: 0px;
+   margin-right: 4px;
+   margin-bottom: 1px;
+}
+
+/* ************************************ */
+/*    All / Compatible     */
+/* ************************************ */
+
+button[disabled], 
+button[disabled]:hover,
+button[disabled]:link {
+   background-color: #f5f5f5;
+   color: #A0A0A0;
+   cursor: text;
+}
+
+a.commandButton[disabled], 
+a.commandButton[disabled]:link, 
+a.commandButton[disabled]:active, 
+a.commandButton[disabled]:hover {
+   background-color: #f5f5f5;
+   color: #a7a6aa;
+   cursor: text;
+}
+
+
+/* CommandButton Style Extensions */
+a.commandButton { 
+text-indent: 3px;
+}
+a.commandButton, a.commandButton:link, a.commandButton:active, a.commandButton:visited,
+.coBBBRIGHT.coBB ul li button[type="submit"], .MaskButtonBar button {
+line-height: 1.2em;
+min-height: 20px;
+box-sizing: border-box;
+font-size: 1em;
+padding: 1px 0.65em;
+}
+td a.commandButton {
+margin-top:2px; /* because of line-height 22 and height only 16 */
+}
+a.commandButton img { 
+padding:0;
+padding-right:3px;
+margin-bottom:-1px; /* for ie alignment needed */
+color:-3px\9; /* IE9 only */  
+/* height:16px; */
+}
+.commandButton.btnMiniPadding, 
+a.commandButton.btnMinipadding{
+padding:0px 1px 1px 1px;
+margin:0px;
+text-indent:0;
+}
+a.commandButton.btnMiniPadding img, 
+.commandButton.btnMinipadding img, 
+.commandButton.btnMinipadding > img, 
+a.commandButton.btnMinipadding > img {
+padding:0px 1px 0px 1px;
+margin-bottom:0px;
+margin:0;
+}
+
+a.icon16 img{ /* "icon16" class for icon links */
+display: inline-block; 
+line-height:16px; 
+height:16px; width:16px; 
+margin-right:1px; 
+vertical-align:bottom; 
+}
+
+/* --- */
+
+
+/* ------------------------------------------------------------------------- */ 
+/* Object */
+/* ------------------------------------------------------------------------- */ 
+
+.coObjectPrint
+{
+  width: 8.0em;
+  height: 2.85em;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* Drag & Drop */
+/* ------------------------------------------------------------------------- */ 
+
+.droppableHover
+{
+    /*border: 0.1em solid black;*/
+    background-color: #f5f5f5;
+}
+
+.autoOffset
+{
+   left: auto;
+   top:  auto;
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* List Styles */
+/* ------------------------------------------------------------------------- */ 
+ul.listStyleHorizontal {
+  padding: 0px;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+li.listStyleHorizontal {
+  display: inline;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li.coListSection, ul.coListSection{
+  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 0.8em;
+}
+
+span.coListSectionHeaderText, a.coListSectionHeaderText{
+  display: block;
+  background-color: #C8C8DD;
+  padding-left: 0.2em;
+  margin: 2px;
+}
+
+a.coListSectionHeaderText{
+  text-decoration: none;
+  color: black;
+}
+a.coListSectionHeaderText > img{
+  vertical-align: middle;
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* ButtonBar                                                                 */
+/* ------------------------------------------------------------------------- */ 
+
+*+html table.coBB {
+  border-collapse: collapse;  /* IE FIX */
+}
+
+table.coBB { 
+  border-spacing: 0px;
+}
+
+td.coBB {
+  text-align: left;
+}
+
+td.coBBBLEFT, td.coBBBRIGHT, td.coBBBTOP, td.coBBBBOTTOM {
+   border-style: solid;
+   border-width: 1px;
+   border-color: #c8c8dd;
+}
+
+td.coBBBRIGHT.coBB { 
+  white-space: nowrap; 
+}
+
+td.coBBBLEFT {
+  border-right: none;
+  padding-right: 0px !important;
+  text-align: left !important;
+}
+
+td.coBBBRIGHT {
+  border-left: none;
+  padding-left: 0px !important;
+  text-align: right !important;
+}
+td.coBBBTOP{
+  border-bottom: none;
+  padding-bottom: 0px !important;
+  vertical-align: top !important;
+}
+td.coBBBBOTTOM {
+  border-top: none;
+  padding-top: 0px !important;
+  vertical-align: bottom !important;
+}
+
+ul.coBB {
+  list-style-type: none;
+  margin: 0px;
+  padding: 4px;
+}
+
+/** display block for all buttons in sidebar **/
+td.coBBBTOP ul.coBB a, td.coBBBBOTTOM ul.coBB a {
+  display: block;
+}
+
+li.coBB {
+  display: inline;
+}
+
+.coBB td.invisible{
+  border: none;
+  display: inline !important; /* IE */
+}
+
+/** for modern browsers **/
+html>/**/body .coBB td.invisible {
+  display: table !important;
+}
+
+.coBBNoCSS table.coBB {
+  width: 100%;
+}
+
+.coBBNoCSS td.coBBContent {
+  width:98%;
+}
+
+body .overlayTTContainer .coBB .coBBContent,
+body .overlayTTContainer .coBBContent .MaskData table.coBB > tbody > tr { 
+  display: table; /* or resp. display: block; */
+} 
+
+/* --------------------------------------------------------- */  
+/* --- Anpassungen coMASK Container Layout 28.10.2010 DE --- */
+td.coBBBLEFT, td.coBBBRIGHT, td.coBBBTOP, td.coBBBBOTTOM {
+  border:none;
+}
+/* --------------------------------------------------------- */  
+/* ------------------------------------------------------------------------- */ 
+/* -- COWizard                                                               */
+/* ------------------------------------------------------------------------- */ 
+#wzHeader {
+  background-color: #c0c6c9;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 5px;
+  font-variant: small-caps;
+  margin: 0px;
+  text-align: left;
+}
+
+#wzHeader table {
+  width: 100%;
+}
+
+#wzToolBar {
+  font-size: 0.8em;
+  font-variant: normal;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+  text-align: right;
+  float: right;
+}
+
+#wzToolBar .commandButton {
+  background-color: #c0c6c9;
+}
+
+#wzNav {
+  overflow: auto;
+  width: 15em;
+  text-align: left;
+}
+
+#wzNav ul {
+  margin: 10px 0px 0px 0px;
+  padding-left: 15px;
+  font-size: 0.85em;
+}
+
+#wzNav li {
+  list-style-type: none;
+}
+
+#wzNav li.selected {
+  list-style-type: disc !important;
+}
+
+#wzNav a.selected {
+  color: black !important;
+  font-weight: bold;
+}
+
+#wzContent {
+  border: 1px solid #C8C8DD;
+  background-color: #FAFAFA;
+  overflow: auto;
+  text-align: left;
+}
+
+.wzContainer {
+  border: none !important;
+}
+
+.wzHeaderLabel {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  background-color: #FAFAFA !important;
+  font-weight: bold;
+  width: auto !important;
+  background-image: none !important;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* -- cuList Beginn                                                          */
+/* ------------------------------------------------------------------------- */ 
+
+  /* Turn off list bullets */
+  ul.cuList, ul.cuList ul , ul.cuList li { list-style-type: none; }
+  
+  /* Control how "spaced out" the tree is */
+  ul.cuList, ul.cuList ul , ul.cuList li { margin-left:0.8em; padding:0em; min-width: 16em; }
+
+  ul.cuList li.bullet { line-height: 22px; vertical-align:middle; display: block; float: left; margin: 0em; margin-right: 1em; }
+  ul.cuList li.bullet > a { margin-right: 0.15em; display: inline-block; }
+  ul.cuList li.bullet > a img { display: inline-block; vertical-align: middle; margin-bottom:2px; }
+
+  ul.initial {
+  list-style-type:initial !important;
+}
+
+  ul.disc, ul.disc ul , ul.disc li {
+  list-style-type:disc;
+}
+
+  ul.circle, ul.circle ul , ul.circle li {
+  list-style-type:circle;
+}
+  
+/* ------------------------------------------------------------------------- */ 
+/* -- cuList Ende                                                            */
+/* ------------------------------------------------------------------------- */ 
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Curricula Support  */
+/* ------------------------------------------------------------------------- */ 
+tr > td.tree-col:first-child a {
+  text-decoration:none !important;   
+}
+
+.flag-true {
+  text-decoration:none !important;
+  color:green;
+  font-size:1.1em;
+}   
+
+.flag-false {
+  text-decoration:line-through !important;
+  color:#D90000;
+  font-size:1.1em;
+}   
+
+.cs_green {
+  background-image:url(/tumprod/img/cs_green.gif);
+  background-position:center top;
+  background-repeat:no-repeat;
+  height:1.78em; 
+  width:1.78em;
+} 
+ 
+.cs_green a {
+   color:white !important;
+   font-weight:bold;
+  display:block;
+  text-decoration:none;
+}
+
+.cs-path-grp {
+  font-weight:bold !important;    
+  margin:4px !important; 
+}
+
+.tree-col {
+  white-space:nowrap;
+}   
+   
+.cs-path {
+  vertical-align:middle !important;
+  font-weight:bold !important;        
+  margin-right:4px !important;   
+}
+
+.ass-info {
+  white-space:normal !important;
+  font-size:0.8em;
+}
+
+.cs-text-normal {
+   font-weight:normal;
+}
+
+.cs-path-container{
+  float:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  vertical-align:text-bottom !important;
+}
+
+.resizable-div{
+  border-right:        6px solid;
+  border-bottom:       6px solid;  
+  border-color:        #CCCCCC;  
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: Curricula Support */
+/* ------------------------------------------------------------------------- */ 
+
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Studkart */
+/* ------------------------------------------------------------------------- */ 
+
+tr.nichtLetztgueltigText, .hi tr.nichtLetztgueltigText, tr.nichtLetztgueltigText:hover{
+  color:#A0A0A0;
+}
+
+
+tr.angemeldetText, .hi tr.angemeldetText, tr.angemeldetText:hover{
+ color: #CC6600; 
+}
+  
+#idStudImg{
+  width: 144px;  
+  height: 190px;
+}
+
+@media screen, projection{
+
+  #pStudienListContainer{
+    min-height: 8.3em;
+    resize: both;     
+  }  
+
+  #pAllExamsListContainer{
+    min-width: 85.3em;  
+    height: 32.2em;
+    resize: both;     
+  }
+
+  #pAllExamsExortListContainer{
+    min-width: 56em;  
+    height: 6em;
+    resize: both;     
+  }
+  
+  #pAllExamsAAGListContainer{
+    min-width: 85.3em;  
+    height: 32.2em;
+    resize: both;     
+  }
+  
+  #pFinalExamsListContainer{
+    min-width: 85.3em;  
+    height: 20em;
+    resize: both;     
+  }
+  
+  #pFinalThesisListContainer{
+    min-width: 85.3em;  
+    height: 20em;
+    resize: both;     
+  }
+  
+  #ALL_LECTURES{
+    min-width: 85.3em;  
+    height: 40em;
+    resize: both;     
+  }
+
+  #WEBLOG{
+    min-width: 85.3em;  
+    height: 40em;
+    resize: both;     
+  }
+
+a.studKartPrvCall {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+/*
+  #pAdmissionStudyListContainer{
+    min-width: 85.3em;  
+    height: 20em;
+    resize: both;
+  }
+    
+  #pAdmissionContainer{
+    min-width: 85.3em;  
+    height: 20em;
+    resize: both;     
+  }
+*/
+}  
+
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: Studkart */
+/* ------------------------------------------------------------------------- */ 
+
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Studierenden-Massenabfrage */
+/* ------------------------------------------------------------------------- */ 
+
+select.massRegSpoVersion{
+  border: 2px solid #47C345;
+}  
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: Studierenden-Massenabfrage */
+/* ------------------------------------------------------------------------- */ 
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: LBS */
+/* ------------------------------------------------------------------------- */ 
+div.MapControl
+{
+   position: absolute;
+   z-index:98;
+   cursor:pointer;
+}
+
+img.MarkerImg
+{
+   width:32px;
+   height:32px;
+}
+
+div.Windrose {
+    position:absolute;
+    width:51px;
+    height:51px;
+    background-image:url(/tumprod/img/windrose_vista.png);
+    z-index:97;
+}
+
+div.WindroseSign
+{
+   position:absolute;
+   z-index:98;
+   font-family:Tahoma, Verdana;
+   font-size:9px;
+   color:white;
+   width:9px;
+   height:9px;
+}
+
+div.Fog
+{
+   position: relative;
+   z-index: 99;
+   background-color:black;
+   opacity:0.5;
+   zoom:1;
+   filter:alpha(opacity = 50);
+}
+
+.MapsBorder
+{
+   border: 1px solid black;
+}
+
+li.disabled {
+  color: #a7a6aa;
+} 
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: LBS */
+/* ------------------------------------------------------------------------- */ 
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: OrgBaum                                                    */
+/* ------------------------------------------------------------------------- */ 
+#OrgTree
+{
+    width:100%;
+    margin:0em;
+}
+
+#OrgTree li
+{
+    margin-bottom:-0.25em;
+}
+
+#OrgTree li
+{
+   white-space:nowrap;   
+}
+
+#OrgTree li div.contentDiv a
+{
+    text-decoration:none;
+    vertical-align:top;
+    white-space:nowrap;    
+}
+
+#Slider
+{
+   position:absolute;
+   width:6px;
+   height:100%;
+   cursor:e-resize;
+   z-index:50;
+   left:254px;
+   top:0px;
+   margin:0px;
+   padding:0px;
+   background-color: #cccccc;
+}
+
+#TreeContainer
+{
+  overflow-x:hidden;
+  overflow-y:auto;
+  margin:0px;
+  padding:0em;
+  margin-right:6px;
+  /*setting initial height, height will be set by js*/
+  height:100em;
+}
+
+#TreeEffectOverlay
+{
+  background-color:#c2c2c2;
+}
+
+#TreeEffectOverlay img
+{
+   padding-top:7px;
+}
+
+div.OrgTree_aa, div.OrgTree_select a { 
+   font-weight:bold;
+}
+
+a.OrgTreeFontSizeSmall
+{
+   font-size:1em;
+}
+
+a.OrgTreeFontSizeNormal
+{
+   font-size:1.1em;
+}
+
+a.OrgTreeFontSizeLarge
+{
+   font-size:1.2em;
+}
+
+#OrgTree li ul li div.contentDiv {
+   font-size:1em;
+}
+
+#OrgTree li div.contentDiv {
+   font-size:1em;
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: OrgBaum                                                      */
+/* ------------------------------------------------------------------------- */ 
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: AdressAPI                                                  */
+/* ------------------------------------------------------------------------- */
+.SmallFontsizeButton{
+    font-size:0.8em !important;
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: AdressAPI                                                  */
+/* ------------------------------------------------------------------------- */  
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: CoChart                                                  */
+/* ------------------------------------------------------------------------- */
+.coChart {
+   width:30em;
+   height:20em;
+} 
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: CoChart                                                  */
+/* ------------------------------------------------------------------------- */  
+
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Image Crop Library                                         */
+/* ------------------------------------------------------------------------- */
+.imgCrop_wrap {
+ /* width: 500px;   @done_in_js */
+ /* height: 375px;  @done_in_js */
+ position: relative;
+ cursor: crosshair;
+}
+
+/* an extra classname is applied for Opera < 9.0 to fix it's lack of opacity support */
+.imgCrop_wrap.opera8 .imgCrop_overlay,
+.imgCrop_wrap.opera8 .imgCrop_clickArea { 
+ background-color: transparent;
+}
+
+/* fix for IE displaying all boxes at line-height by default, although they are still 1 pixel high until we combine them with the pointless span */
+.imgCrop_wrap,
+.imgCrop_wrap * {
+ font-size: 0;
+}
+
+.imgCrop_overlay {
+ background-color: #000;
+ opacity: 0.5;
+ filter:alpha(opacity=50);
+ position: absolute;
+ width: 100%;
+ height: 100%;
+}
+
+.imgCrop_selArea {
+ position: absolute;
+ /* @done_in_js 
+ top: 20px;
+ left: 20px;
+ width: 200px;
+ height: 200px;
+ background: transparent url(castle.jpg) no-repeat  -210px -110px;
+ */
+ cursor: move;
+ z-index: 2;
+}
+
+/* clickArea is all a fix for IE 5.5 & 6 to allow the user to click on the given area */
+.imgCrop_clickArea {
+ width: 100%;
+ height: 100%;
+ background-color: #FFF;
+ opacity: 0.01;
+ filter:alpha(opacity=01);
+}
+
+.imgCrop_marqueeHoriz {
+ position: absolute;
+ width: 100%;
+ height: 1px;
+ background: transparent url(../img/marqueehoriz.gif) repeat-x 0 0;
+ z-index: 3;
+}
+
+.imgCrop_marqueeVert {
+ position: absolute;
+ height: 100%;
+ width: 1px;
+ background: transparent url(../img/marqueevert.gif) repeat-y 0 0;
+ z-index: 3;
+}
+
+/* 
+ *  FIX MARCHING ANTS IN IE
+ * As IE <6 tries to load background images we can uncomment the follwoing hack 
+ *  to remove that issue, not as pretty - but is anything in IE?
+ *  And yes I do know that 'filter' is evil, but it will make it look semi decent in IE
+ *
+* html .imgCrop_marqueeHoriz,
+* html .imgCrop_marqueeVert {
+ background: transparent;
+ filter: Invert; 
+}
+* html .imgCrop_marqueeNorth { border-top: 1px dashed #000; }
+* html .imgCrop_marqueeEast  { border-right: 1px dashed #000; }
+* html .imgCrop_marqueeSouth { border-bottom: 1px dashed #000; }
+* html .imgCrop_marqueeWest  { border-left: 1px dashed #000; }
+*/
+
+.imgCrop_marqueeNorth { top: 0; left: 0; }
+.imgCrop_marqueeEast  { top: 0; right: 0; }
+.imgCrop_marqueeSouth { bottom: 0px; left: 0; }
+.imgCrop_marqueeWest  { top: 0; left: 0; }
+
+
+.imgCrop_handle {
+ position: absolute;
+ border: 1px solid #333;
+ width: 6px;
+ height: 6px;
+ background: #FFF;
+ opacity: 0.5;
+ filter:alpha(opacity=50);
+ z-index: 4;
+}
+
+/* fix IE 5 box model */
+* html .imgCrop_handle {
+ width: 8px;
+ height: 8px;
+ wid\th: 6px;
+ hei\ght: 6px;
+}
+
+.imgCrop_handleN {
+ top: -3px;
+ left: 0;
+ /* margin-left: 49%;    @done_in_js */
+ cursor: n-resize;
+}
+
+.imgCrop_handleNE { 
+ top: -3px;
+ right: -3px;
+ cursor: ne-resize;
+}
+
+.imgCrop_handleE {
+ top: 0;
+ right: -3px;
+ /* margin-top: 49%;    @done_in_js */
+ cursor: e-resize;
+}
+
+.imgCrop_handleSE {
+ right: -3px;
+ bottom: -3px;
+ cursor: se-resize;
+}
+
+.imgCrop_handleS {
+ right: 0;
+ bottom: -3px;
+ /* margin-right: 49%; @done_in_js */
+ cursor: s-resize;
+}
+
+.imgCrop_handleSW {
+ left: -3px;
+ bottom: -3px;
+ cursor: sw-resize;
+}
+
+.imgCrop_handleW {
+ top: 0;
+ left: -3px;
+ /* margin-top: 49%;  @done_in_js */
+ cursor: w-resize;
+}
+
+.imgCrop_handleNW {
+ top: -3px;
+ left: -3px;
+ cursor: nw-resize;
+}
+
+/**
+ * Create an area to click & drag around on as the default browser behaviour is to let you drag the image 
+ */
+.imgCrop_dragArea {
+ width: 100%;
+ height: 100%;
+ z-index: 200;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.imgCrop_previewWrap {
+ /* width: 200px;  @done_in_js */
+ /* height: 200px; @done_in_js */
+ overflow: hidden;
+ position: relative;
+}
+
+.imgCrop_previewWrap img {
+ position: absolute;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* ENDE Kontext: Image Crop Library                                          */
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Icons                                                      */
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------- */ 
+/* ENDE Kontext: Icons                                                       */
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: PV Application List                                        */
+/* ------------------------------------------------------------------------- */
+a.appIcon > img {
+  height: 2em !important;
+  width: 2em !important;
+}
+a.appLink{
+  font-weight: bold;
+  white-space: nowrap;
+}
+a:hover.appDockIcon > img {
+  height: 4em !important;
+  width: 4em !important;
+
+}
+/*
+.appDockBox > div.MaskBackground{
+  background-color: transparent;
+  border: 0px;
+  height: 5em
+}
+*/
+
+ul.appDockBox{
+  height: 5em;
+}
+
+li.appDockItem{
+  float: left;
+  list-style: none;
+}
+
+/*
+.appDockBox > div.MaskBackground > div.MaskContent{
+  display: inline;
+  background-color: #C8C8DD;
+}
+*/
+
+/* ------------------------------------------------------------------------- */ 
+/* ENDE Kontext: PV Application List                                         */
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* BEGINN Kontext: PV pin reset                                              */
+/* ------------------------------------------------------------------------- */
+fieldset.pvPinResetAll{
+  background-color: darkgoldenrod;
+}
+/* ------------------------------------------------------------------------- */
+/* ENDE Kontext: PV pin reset                                                */
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: Pr�fungsergebnisse der Abschlusspr�fung (pv.wbStFinalExam) */
+/* ------------------------------------------------------------------------- */
+#idFinalExamExams{
+ min-width:70em;
+}
+#idFinalExamCourse{
+ min-width:70em;
+}
+#idFinalExamNotAssignedExams{
+ min-width:70em;
+}
+/* ------------------------------------------------------------------------- */ 
+/* ENDE Kontext: Pr�fungsergebnisse der Abschlusspr�fung (pv.wbStFinalExam)  */
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Raum                                                       */
+/* ------------------------------------------------------------------------- */
+
+.LBSCTBuilding
+{
+   height: 45.85em;
+   width: 38em;
+   position: relative;
+}
+
+.LBSCTMap1
+{
+   height: 15em;
+   width: 38em;
+   position: relative;
+}
+
+.LBSCTMap2
+{
+   height: 28em;
+   width: 38em;
+   position: relative;
+}
+
+#idTableBenutzer { width: 40em; }
+/* ------------------------------------------------------------------------- */ 
+/* ENDE Kontext: Raum                                                        */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: WFLAdmin                                                       */
+/* ------------------------------------------------------------------------- */
+
+#wfl_role_table
+{
+   table-layout:fixed;
+   width:100%;
+}
+#wfl_role_table
+{
+   table-layout:fixed;
+   width:100%;
+}
+#wfl_fun_table
+{
+   table-layout:fixed;
+   width:100%;
+}
+/*#wfl_edit_roles_form div.MaskBackground 
+{
+    width:99%;
+}*/
+
+/* ------------------------------------------------------------------------- */ 
+/* ENDE Kontext: WFLAdmin                                                        */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: AutoSuggest */
+/* ------------------------------------------------------------------------- */
+a.as_wai_info_anchor {
+    position:absolute;
+    top:0;
+    left:-3000em;
+} 
+div.as_listing_div {
+    border: 1px solid #a9a9a9;
+    border-radius: 3px;
+    z-index: 1000;
+    background-color:white;
+    font-size:13px;
+    padding:0;
+    white-space:nowrap;
+    -moz-box-shadow: 7px 7px 5px #888;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -webkit-box-shadow: 7px 7px 5px #888;
+    box-shadow: 7px 7px 5px #888;
+    margin-top:-2px;
+    max-height:188px;
+    max-width:59em; /*90%;*/
+}
+ul.as_listing_ul {
+    list-style-type:none;
+    list-style-position:inside;
+    padding:0;
+    margin:0;
+    font-family:arial,sans-serif;
+    font-size:1em;
+    overflow-x:hidden;
+    overflow-x: hidden !important; /* for IE */
+    cursor: pointer;
+}
+ul.as_listing_ul > li { 
+    display: block;
+    line-height:18px;
+    margin:0;
+    padding: 3px 2px;
+    padding-right:1em;
+    border-bottom: 1px dotted #ccc;
+}
+li.as_non_highlighted_li{
+    white-space: pre-wrap;
+}
+ul.as_listing_ul li:hover,
+ul.as_listing_ul li.as_highlighted_li {
+    background: #1e90ff;
+    color: #fff;
+}
+.as_listing_div ul.as_listing_ul li, 
+.as_listing_div ul.as_listing_ul li.as_non_highlighted_li,
+.as_listing_div ul.as_listing_ul li.as_highlighted_li { 
+  white-space: normal; 
+}
+div.as_name_entry_div {
+    padding:0; 
+    margin:0;
+}
+div.as_name_entry_div div{
+   margin-right:5px;
+   margin-left:5px;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: AutoSuggest */
+/* -----------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: OrgDefBaum */
+/* ------------------------------------------------------------------------- */
+#OrgDefTree
+{
+    width:100%;
+    margin:0em;
+}
+
+#OrgDefTree li
+{
+    margin-bottom:-0.25em;
+}
+
+#OrgDefTree li
+{
+   white-space:nowrap;   
+}
+
+#OrgDefTree li div.contentDiv a
+{
+    text-decoration:none;
+    vertical-align:top;
+    white-space:nowrap;    
+}
+
+div.OrgDefTree_select a
+{
+   font-weight:bold;
+}
+
+a.OrgDefTreeFontSizeSmall
+{
+   font-size:1em;
+}
+
+a.OrgDefTreeFontSizeNormal
+{
+   font-size:1.1em;
+}
+
+a.OrgDevTreeFontSizeLarge
+{
+   font-size:1.2em;
+}
+
+#OrgDefTree li ul li div.contentDiv {
+   font-size:1em;
+}
+
+#OrgDefTree li div.contentDiv {
+   font-size:1em;
+}
+
+a.navselected {
+   text-decoration:none;
+   color:black;
+   font-weight:bold;
+}
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: OrgDefBaum */
+/* -----------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: OrgTypBaum */
+/* ------------------------------------------------------------------------- */
+#OrgTypTree
+{
+    width:100%;
+    margin:0em;
+}
+
+#OrgTypTree li
+{
+    margin-bottom:-0.25em;
+}
+
+#OrgTypTree li
+{
+   white-space:nowrap;   
+}
+
+#OrgTypTree li div.contentDiv a
+{
+    text-decoration:none;
+    vertical-align:top;
+    white-space:nowrap;    
+}
+
+div.OrgTypTree_select a
+{
+   font-weight:bold;
+}
+
+a.OrgTypTreeFontSizeSmall
+{
+   font-size:1em;
+}
+
+a.OrgTypTreeFontSizeNormal
+{
+   font-size:1.1em;
+}
+
+a.OrgTypTreeFontSizeLarge
+{
+   font-size:1.2em;
+}
+
+#OrgTypTree li ul li div.contentDiv {
+   font-size:1em;
+}
+
+#OrgTypTree li div.contentDiv {
+   font-size:1em;
+}
+
+a.navselected {
+   text-decoration:none;
+   color:black;
+   font-weight:bold;
+}
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: OrgTypBaum */
+/* -----------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: PRINT CSS                                                   */
+/* --------------------------------------------------------------------------*/
+@media print{
+  div.MaskData, div.MaskContent, html > body div.MaskBackground{
+    display: block;
+  }
+
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: PRINT CSS                                                     */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Terminverwaltung - Suche freie R�ume */
+/* ------------------------------------------------------------------------- */ 
+
+/*Ampelstatus*/
+td.tvwRS_green{
+  background-color: #04B404;
+}  
+
+td.tvwRS_orange{
+  background-color: #FE9A2E;
+}  
+
+td.tvwRS_red{
+  background-color: #DF0101;
+}  
+
+/*starker Rahmen zur Abgrenzung*/
+td.tvwRS_separator{
+  border-bottom: 4px ridge #DDDDDD !important ;
+}  
+
+/*Selektieren durch Aufziehen eines Rechtecks; border muss exakt 1px breit sein*/
+div.tvwRS_rectangularSelect{
+  background-color: #999999; 
+  border: 1px solid black; 
+  opacity: 0.4; 
+  filter:alpha(opacity=40); 
+  -moz-opacity:0.4; 
+  position: absolute; 
+  z-index: 999999; 
+  width: 0px; 
+  height: 0px;
+  font-size: 0.8em;
+  cursor: crosshair;
+}  
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: Terminverwaltung - Suche freie R�ume */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: wbPersliste_neu                                            */
+/* ------------------------------------------------------------------------- */
+.fun_icons  {
+  margin-right: 3px;
+  vertical-align: text-top;
+}
+
+.dvrv_anchor {
+  margin-right: 3px;
+}
+a.dvrv_anchor:hover {
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: wbPersliste_neu                                              */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Mitteilungsblaetter                                        */
+/* ------------------------------------------------------------------------- */
+
+a.mbl_dmg_filename {
+  width: 20em;
+  display: block;
+}
+
+span.mbl_display_html_search {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+form.mbl_html_mask div.MaskBackground {
+  width: 100%;
+  padding: 0;
+}
+
+form.mbl_html_mask div.MaskBackground  div.MaskContent div.MaskData{
+  padding: 0.4em
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: Mitteilungsblaetter                                          */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: coFilter                                                   */
+/* ------------------------------------------------------------------------- */
+.coFilter.toolButton{
+    font-size:  1.2em  !important;
+    line-height:  1.2em  !important;
+}
+.coFilter.toolButtonClose{  color:  red!important  }
+.coFilterTitel{
+    background-color:  white;
+    border:  1px  solid black;
+    padding-left:  5px;
+    padding-right:  5px;
+    font-weight:  bold;
+}
+.coFilter.overlayTTContainer{  padding:  0  }
+.coFilterContainer.MaskRenderer.top.MaskLabel{  background-color:  transparent}
+.coFilterOperator{
+    font-size:  1.4em;
+    padding-left:  0.5em;
+    border: none;
+}
+.coFilter.toolActive{  border-style:  inset!important  }
+
+.coFilter td { padding:0 !important; }
+
+.ianchor{  white-space:  nowrap}
+/*.ianchor img{ 
+    margin-right:  0.3em;
+    vertical-align:  middle;
+}*/ /* not needed anymore due to commandButton with img enhancement */
+
+.headerTool img{
+   margin:0.1em;
+   vertical-align:middle;
+}
+
+.headerToolSpacer {
+   width:0.3em;
+}
+
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: coFilter                                                     */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: Evaluierungen                                              */
+/* ------------------------------------------------------------------------- */
+div.tab_container a.tab_name
+{
+   border:2px solid #bbbbbb;
+   -moz-border-radius-topleft:6px;
+   -moz-border-radius-topright:6px;
+   -webkit-border-top-left-radius:6px;
+   -webkit-border-top-right-radius:6px;
+   border-radius:6px 6px 0 0;
+   position:relative;
+   bottom:-2px;
+   z-index:100;
+   background-color:#e0e0dd;
+   outline: none;
+   color:black;
+   border-bottom:2px solid #c8c8dd;
+   margin-right:1px;
+}
+
+div.tab_container a.tab_name_ie7
+{
+   bottom:-5px;
+}
+
+div.tab_container a.tab_name_selected
+{
+   background-color:#fefefe;
+   color:black;
+   border-color:#c8c8dd;
+   border-bottom:2px solid #fefefe;
+}
+
+.tab_external_content{
+   border:2px solid #c8c8dd;
+   background-color:#fefefe;
+}
+
+.tab_internal_content{
+   margin:0.3em 0.1em 0.2em 0.3em;
+}
+
+.tab_internal_content table.cotable .coRow td { 
+   white-space: normal; 
+}
+.tab_internal_content table.cotable .coRow td.nowrap { 
+   white-space: nowrap; 
+}
+
+
+div.tab_container div.tab_name_spacer {
+   background-color:red;
+   width:100%;
+}
+
+.tab_unselectable{
+  color: #808080 !important;
+}
+
+a.vert_link{
+   margin-left:0.5em;
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: Evaluierungen                                                */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: Bewerbungen                                                */
+/* ------------------------------------------------------------------------- */
+
+a.NCConfNEW
+{
+   font-style: italic;
+}
+
+a.NCConfEDIT
+{
+   color:#006600;
+   font-size: 115%;
+}
+
+a.NCConf
+{
+    font-weight:bold;
+   padding-right: 1em;
+}
+
+tr.STGBNDROW td input, table#StudiengangsBuendelID thead
+{
+ display: none;
+}
+
+a.commandButton.pull-right-half-em
+{
+    margin-left: 0.5em;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext: Bewerbungen                                                  */
+/* ------------------------------------------------------------------------- */ 
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: STM                                                */
+/* ------------------------------------------------------------------------- */
+
+.disabled
+{
+   color: gray;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext: Bewerbungen                                                  */
+/* ------------------------------------------------------------------------- */ 
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: coChart-Examples                                           */
+/* ------------------------------------------------------------------------- */
+
+.pie_chart_legend_container{
+   width:30em;
+   height:5em;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext: coChart-Examples                                             */
+/* ------------------------------------------------------------------------- */ 
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: coComboBox      */
+/* ------------------------------------------------------------------------- */
+
+.as_cb_valid
+{
+}
+
+.as_cb_invalid
+{
+   color:red;
+}
+
+input.as_cb_required
+{
+   border-right:1px solid #bbbbbb;
+   outline:none;
+}
+
+.as_cb_drop_down_sign
+{
+   border:1px solid #bbbbbb;
+   border-left:none;
+   background-color:white;
+   position:relative;
+   width:20px;
+   height:20px;
+   
+   border-bottom-right-radius: 6px;
+   border-top-right-radius: 6px;
+}
+
+.as_cb_drop_down_sign_req
+{
+   border:2px double #FFC900;
+   border-left:none;
+   width:18px;
+   height:18px;
+}
+
+.as_cb_drop_down_sign_ff
+{
+   top:2px;
+   left:-2px;
+   -moz-border-radius-topright:6px;
+   -moz-border-radius-bottomright:6px; 
+}
+
+table.cotable .as_cb_drop_down_sign_ff{
+   left:-5px;
+}
+
+
+.as_cb_drop_down_sign_webkit
+{
+   top:4px;
+   left:-4px;
+   -webkit-border-top-right-radius:6px;
+   -webkit-border-bottom-right-radius:6px; 
+}
+
+table.cotable .as_cb_drop_down_sign_webkit{
+   left:-7px;
+}
+
+.as_cb_drop_down_sign_ie8
+{ 
+   top:2px;
+   left:-2px; 
+   border-radius: 0 6px 6px 0;
+}
+
+table.cotable .as_cb_drop_down_sign_ie8{
+   left:-5px; 
+}
+
+.as_cb_drop_down_sign_ie7
+{ 
+   top:3px;
+   left:-4px; 
+}
+
+table.cotable .as_cb_drop_down_sign_ie7
+{ 
+   left:-7px; 
+}
+
+.as_cb_drop_down_sign_opera
+{ 
+   top:2px;
+   left:-2px; 
+}
+
+table.cotable .as_cb_drop_down_sign_opera{
+   left: -5px;
+}
+
+.as_cb_drop_down_sign table
+{
+   width:100%;
+   height:100%;   
+}
+
+.as_cb_drop_down_sign td
+{
+   vertical-align:middle;
+   text-align:center;
+}
+
+.as_cb_drop_down_sign:hover 
+{
+   background-color:#e4e4f1;   
+   cursor:pointer;
+} 
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext: coComboBox      */
+/* ------------------------------------------------------------------------- */ 
+
+/* ... helper class */
+.truncate {
+  width: 200px; max-width:200px;  /*customize width */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: ZGE Baeume                                                 */
+/* ------------------------------------------------------------------------- */ 
+#ZGEOrgTree, #ZGEOrgHTree
+{
+    width:100%;
+    margin:0em;
+}
+
+#ZGEOrgTree .chkboxDiv a img, #ZGEOrgHTree .chkboxDiv a img
+{
+ margin: 0.2em 0.1em;
+}
+
+#ZGEOrgTree li, #ZGEOrgHTree li
+{
+    margin-bottom:-0.25em;
+}
+
+#ZGEOrgTree li, #ZGEOrgHTree li
+{
+   white-space:nowrap;   
+}
+
+#ZGEOrgTree div.contentDiv , #ZGEOrgHTree div.contentDiv 
+{
+   font-size:1em;
+   vertical-align: top;
+   white-space: nowrap;
+   position:relative;
+   top:0.1em;
+}
+
+#ZGE_Navi_coTree span 
+{ 
+   padding: 0px 0.3em; 
+}
+/* ------------------------------------------------------------------------- */ 
+/* END Kontext: ZGE Baeume                                                   */
+/* ------------------------------------------------------------------------- */
+ 
+/* ------------------------------------------------------------------------- */ 
+/* BEGIN Kontext: LV-Erhebung */
+/* ------------------------------------------------------------------------- */ 
+
+/* Markierung Ort/Zeit */
+.lehZO_hl{
+  font-weight: bold;
+  color: #006600;
+}  
+
+/* command buttons (mit rahmen! kein status icon) zur platzsparenden inline-anzeige */
+a.btnMiniPadding {
+  padding: 1px !important;
+  text-indent: 0 !important; /* wegen fieldset legend */
+}
+
+
+/* ------------------------------------------------------------------------- */ 
+/* LV-Erhebung */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: OrgSite-new                                                */ 
+/* --------------------------------------------------------------------------*/
+
+#wbOrg_site_mask .MaskBackground{
+   background-color:transparent;
+   border:none;
+}
+
+#wbOrg_site_spacer_container table:first-child{
+   width:100%;
+}
+
+#wbOrg_site_surrounding_container table:first-child{
+   width:auto;
+}
+
+#wbOrg_site_surrounding_container{
+   display:table;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+#wbOrg_site_listing{
+   margin:0;
+   border: 1px solid #C8C8DD;
+   -webkit-border-radius: 6px;
+/*   -webkit-box-shadow: 5px 5px 3px #888; */
+   -moz-border-radius: 6px;
+/*   -moz-box-shadow: 5px 5px 3px #888; */
+   border-radius: 6px;
+/*   box-shadow: 5px 5px 3px #888; */
+}
+
+#wbOrg_site_listing_content{
+   padding:1.167em;
+}
+
+#wbOrg_site_listing table:first-child{
+   width:100%;
+}
+
+#wbOrg_site_resources{
+   margin-top:2em;
+}
+
+
+.wbOrg_site_resources{
+   margin:0;
+   padding: 0;
+   border: 1px solid #C8C8DD;
+   -webkit-border-radius: 6px;
+/*   -webkit-box-shadow: 5px 5px 3px #888;*/
+   -moz-border-radius: 6px;
+/*   -moz-box-shadow: 5px 5px 3px #888; */
+   border-radius: 6px;
+/*   box-shadow: 5px 5px 3px #888; */
+}
+
+.wbOrg_site_container_header {
+     border-radius: 6px 6px 0pt 0pt;
+}
+
+.wbOrg_site_resources_content {
+     border-radius: 0pt 0pt 6px 6px;
+}
+
+#wbOrg_site_resources div.wbOrg_site_inner_resources
+{   
+   margin-left:1em;
+}
+
+.wbOrg_site_resources_legend{
+   background-color:#EEEEEE;
+   border-bottom: 1px solid #C8C8DD;
+   color:#0A0A0A;
+   font-size:0.9em;
+   text-align:left;
+}
+
+.wbOrg_site_resources_legend td{
+   padding:0.167em 0 !important;
+   text-indent:0.667em; 
+}
+
+.wbOrg_site_resources_content{
+   padding:0.5em;
+}
+
+.wborg_kennung
+{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.wborg_kennung_container
+{
+  float: right;
+  margin: 0 0.6em 0 1em;
+}
+
+.wborg_name
+{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.wborg_typ
+{
+  font-size: 1.3em;
+}
+
+.wborg_appl_liste
+{
+  margin: 0;
+  padding: 0;
+}
+
+.wborg_appl_cols
+{
+  margin: 1em 0.1em !important;
+}
+
+.wborg_container
+{
+  margin: 0.1em !important;
+}
+
+/* COMPATIBILITY ORG_SEITE */
+
+.wborg_appl_liste li  {
+   min-height:32px; 
+}
+.wborg_appl_liste li a {
+  display: table-cell;
+  vertical-align: middle;
+}
+li a img.wborg_appl_liste_img, img.wborg_icon
+{
+  height: auto; max-height: 32px;
+  width: auto; max-width: 32px;
+  margin-right: 0.3em;
+  margin-top:1px;
+  margin-bottom:1px;
+}
+.wborg_appl_liste > li > a { 
+  min-width: 36px;  
+}
+.wborg_appl_liste li a:nth-child(1) { 
+/* for better rendering in combination with old/local icons */
+position.relative; width:37px; 
+} 
+/*li a img.wborg_appl_liste_img, img.wborg_icon
+{
+  height: 1.2em;
+  width: 1.2em;
+  margin-right: 0.3em;
+}*/
+
+.wborg_misc
+{
+  text-align: center;
+}
+
+#wbOrg_site_listing, #wbOrg_site_resources
+{
+ text-align: left;
+}
+
+.wborg_misc div.MaskBackground
+{
+  border: none;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wborg_funkperiode
+{
+  background: #c8c8dd;
+  display: block;
+}
+
+.wborg_funkname
+{
+  font-weight: bold;
+}
+
+#wbOrg_site_listing_content table
+{
+  width: auto !important;
+}
+
+#wbOrg_site_listing table,
+.wbOrg_site_resources table,
+.wbOrg_site_resources_legend
+{
+   border-collapse:collapse;
+}
+wbOrg_site_resources table {
+}
+/* ------------------------------------------------------------------------- */
+/* END Kontext: OrgSite-new                                                  */ 
+/* --------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: SAP-Import                                                */ 
+/* --------------------------------------------------------------------------*/
+
+.sap_import_header_1em{
+   width:1em;
+}
+
+.sap_import_header_half_em{
+   width:0.5em;
+}
+
+/* --------------------------------------------------------------------------*/
+/* END Kontext: SAP-Import                                                   */ 
+/* --------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------*/
+/* BEGIN Kontext: cuFileUploader                                             */ 
+/* --------------------------------------------------------------------------*/
+
+div.file_upload_container{
+   position:absolute;
+   height:1.7em;
+   overflow:hidden;
+   left:0;
+   top:0;
+}
+
+.file_upload_textbox{
+   opacity:0;
+   z-index:998;
+   position:relative;
+   left:-12em;
+   top:0;
+   font-size:700%;
+   filter:alpha(opacity = 0);
+}
+
+.file_upload_internal_container{
+   position:relative;
+   left:0;
+   top:0;
+}
+/* ------------------------------------------------------------------------- */
+/* END Kontext: cuFileUploader                                               */ 
+/* --------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: printer friendly CSS                                       */
+/* --------------------------------------------------------------------------*/
+
+/*
+  Einer Table die Klasse printBorder zuordnen um beim Ausdrucken
+  den Rand mitzudrucken!
+*/
+@media print {
+    div.printBorder table.cotable{
+        border-collapse:collapse;
+    }
+
+    div.printBorder table.cotable, div.printBorder table.cotable th, div.printBorder table.cotable td {
+        border-style:solid;
+        border-width: thin;
+        border-color:black;
+    }
+
+    div.printBorder table.cotable th, div.printBorder table.cotable td {
+        padding: 0 0.2em;
+    }
+  }
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext: printer friendly CSS                                         */
+/* --------------------------------------------------------------------------*/ 
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: OrgMetaModell                                              */
+/* --------------------------------------------------------------------------*/
+.orgMetaPeriodenUebernahmeTitle
+{
+  font-weight: bold;
+}
+/* ------------------------------------------------------------------------- */
+/* END Kontext: OrgMetaModell                                                */
+/* --------------------------------------------------------------------------*/ 
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: Funktionenliste                                            */
+/* --------------------------------------------------------------------------*/
+a.fun_list_fun_name
+{
+  color:black;
+  text-decoration: underline;
+  margin-left:0.15em;
+}
+
+div.fun_list_person_entry{
+   padding-left:3em;
+} 
+
+a.fun_list_edit_pencil{
+   margin-left:0.15em;
+}
+/* ------------------------------------------------------------------------- */
+/* END Kontext: Funktionenliste                                              */
+/* --------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext: Visitenkarte                                               */
+/* --------------------------------------------------------------------------*/
+div#previewWrap.imgCrop_previewWrap {
+  border: 0.1em solid;
+  width: 110px;
+  height: 120px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* ------------------------------------------------------------------------- */
+/* END Kontext: Visitenkarte                                                 */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:  Pr�fungstermin exportieren / importieren                  */
+/* --------------------------------------------------------------------------*/
+ul#idMsgBox
+{
+  list-style:none;
+  padding-left: 1em;
+}
+/* ------------------------------------------------------------------------- */
+/* END Kontext:  Pr�fungstermin exportieren / importieren                    */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:  Curricula Support                                         */
+/* --------------------------------------------------------------------------*/
+.flag-false {
+  text-decoration: none !important;
+}
+
+.flag-neutral {
+  text-decoration: none !important;
+  color: #bbb;
+}
+
+/* overrule standard overlay css */
+.curriculaSupport a.overlayToolTip {
+  outline: none !important;
+  border-bottom: 1px none !important;
+  color: #000;
+}
+
+.curriculaSupport th a.overlayToolTip {
+  outline: none !important;
+  border-bottom: 1px dashed !important;
+}
+
+/* css f�r TreeGrid */
+.InactiveNode * {
+  color: #AAA;
+}
+
+.InactiveNodeImportant * {
+  color: #AAA !important;
+}
+
+.colorRed, span.red {
+  color: red;
+}
+
+.colorGreen {
+  color: green;
+}
+
+.colorYellow {
+  color: #FFBF00;
+}
+
+.colorInactive {
+  color: #BBBBBB;
+}
+
+.colorInactiveImportant {
+  color: #BBBBBB !important;
+}
+
+tr.colorInactive a {
+  color: #BBBBBB;
+}
+
+tr.colorInactive img
+{
+  opacity:0.4;              /* nur FF */
+  filter:alpha(opacity=40); /* nur IE */
+}
+
+tr.colorInactive.hi:hover { color: #BBBBBB; }
+
+
+
+/* port von altem tooltip (prototip) ins neue framework */
+div.tooltip div.content {
+  background-color: #F5F6BE;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext:    Curricula Support                                         */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:  Inventar                                                  */
+/* --------------------------------------------------------------------------*/
+
+#InvKtoBaum li ul li div.contentDiv {
+   font-size:1.1em;
+}
+
+#InvKtoBaum li div.contentDiv {
+   font-size:1.1em;
+}
+
+#InvKtoBaum
+{
+    width:100%;
+    margin:0em;
+}
+
+
+#InvKtoBaum li
+{
+    margin-bottom:0.1em;
+}
+
+#InvKtoBaum li
+{
+   white-space:nowrap;   
+}
+
+#InvKtoBaum li div.contentDiv
+{
+    vertical-align:top;
+    white-space:nowrap;    
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext:    Inventar                                                  */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:  Personalverwaltung                                        */
+/* --------------------------------------------------------------------------*/
+
+.persvwSpaltenbreite, .persVwAdr td.MaskLabel label
+ {
+  display: block;
+  width: 12em;
+ }
+
+.persvwHighlightRow
+{
+  background-color:#E9FFE9 !important; 
+} 
+
+.persvwDVTables > table
+{                                            
+  width:100%;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END Kontext:    Personalverwaltung                                        */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:    Systemmanagement Dokumentation                          */
+/* --------------------------------------------------------------------------*/
+#idDokuTree  ul.mktree li.liBullet img
+{
+  padding-left: 0em;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    Systemmanagement Dokumentation                          */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:    Performance Monitoring                                  */
+/* --------------------------------------------------------------------------*/
+.perfMonitoringChartSize
+ {
+  width:  1500px; 
+  height: 500px;
+ }
+
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    Performance Monitoring                                  */
+/* --------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:    OAuth2                                                  */
+/* --------------------------------------------------------------------------*/
+.oAuth2AccountLogo, .oAuth2ProductLogo {
+  width:  120px; 
+  height: 120px;
+  border: 0;
+ }
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    OAuth2                                                  */
+/* --------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:    PSS / AZN                                                  */
+/* --------------------------------------------------------------------------*/
+#idAZNPinResetMask div.as_cb_drop_down_sign,
+#idAZNPersUmschalten div.as_cb_drop_down_sign,
+#MMS_PERSONEN_GENEHMIGUNGEN div.as_cb_drop_down_sign
+{
+  display: none;
+}
+
+#idAbwKomTableOuter table,
+#idAbwKomTable table
+ {
+   width: 100%;
+ }
+
+#idAzn {
+  width:100%;
+  table-layout:fixed;
+}
+#idAzn .columnPerson {
+  width:150px;
+  white-space:nowrap;
+}
+#idAzn .blankCell {
+  background-color:#FFFFFF;
+  border:hidden;
+}
+#idAzn .cellMonthsYears {
+  text-align:center;
+  vertical-align:middle;
+  border-bottom:none;
+  border-bottom:hidden;
+  white-space:nowrap;
+  overflow:visible;
+  padding: 0px;
+  line-height: 1.5em;
+  border:hidden;
+}
+#idAzn .cellMonthsYears:hover {
+  background-color:#FFFFFF;
+}
+#idAzn #idTableMonthsYears {
+  width:100%;
+  background-color:transparent;
+  border:none 0px !important;
+  text-align:center;
+  margin:0px 0px 1px 0px;
+  padding:0 20px 0 0;
+  line-height:26px;
+  height:28px;
+  overflow:hidden;
+  font-size:12px;
+  font-family:verdana;
+  position:relative;
+}
+#idAzn #idTableMonthsYears .selectionYear {
+  text-align:center;
+  vertical-align:middle;
+  background-color:#FFFFFF;
+  border:none 0px;
+}
+#idAzn #idTableMonthsYears .selectionYear a {
+  color:#555555;
+  text-decoration:none;
+}
+#idAzn #idTableMonthsYears .monthCell {
+  padding:0;
+  margin:0;
+  background-color:#FFFFFF;
+  border:none 0px !important;
+  width:100%;
+}
+#idAzn #idTableMonthsYears .tabrow {
+  background-color:#FFFFFF;
+  text-align:center;
+  list-style:none;
+  margin:0;
+  padding:0;
+  line-height:24px;
+  height:26px;
+  overflow:hidden;
+  position:relative;
+  min-width:700px;
+  width:700px;
+}
+#idAzn #idTableMonthsYears .tabrow li {
+  border:1px solid #AAA;
+  background:#D1D1D1;
+  background:-o-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+  background:-ms-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+  background:-moz-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+  background:-webkit-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+  background:linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+  display:inline-block;
+  position:relative;
+  z-index:5;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  box-shadow:0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+  text-shadow:0 1px #FFF;
+  margin:0 -5px;
+  padding:0 3px;
+}
+#idAzn #idTableMonthsYears .tabrow li.selectionMonat {
+  border:1px solid #EEE;
+  background:#FFFFFF;
+  background:-o-linear-gradient(top, #FFFFFF 50%, #D1D1D1 100%);
+  background:-ms-linear-gradient(top, #FFFFFF 50%, #D1D1D1 100%);
+  background:-moz-linear-gradient(top, #FFFFFF 50%, #D1D1D1 100%);
+  background:-webkit-linear-gradient(top, #FFFFFF 50%, #D1D1D1 100%);
+  background:linear-gradient(top, #FFFFFF 50%, #D1D1D1 100%);
+  z-index:4;
+}
+#idAzn #idTableMonthsYears .tabrow li.selection1Jahr,
+#idAzn #idTableMonthsYears .tabrow li.selection2Jahr,
+#idAzn #idTableMonthsYears .tabrow li.selection3Jahr,
+#idAzn #idTableMonthsYears .tabrow li.selection4Jahr {
+  border:0px solid #EEE;
+  background:#FFFFFF;
+  background:-o-linear-gradient(top, #FFFFFF 50%, #F8F8F8 100%);
+  background:-ms-linear-gradient(top, #FFFFFF 50%, #F8F8F8 100%);
+  background:-moz-linear-gradient(top, #FFFFFF 50%, #F8F8F8 100%);
+  background:-webkit-linear-gradient(top, #FFFFFF 50%, #F8F8F8 100%);
+  background:linear-gradient(top, #FFFFFF 50%, #F8F8F8 100%);
+  box-shadow:none;
+}
+#idAzn #idTableMonthsYears .tabrow li.selection1Jahr,
+#idAzn #idTableMonthsYears .tabrow li.selection4Jahr
+{
+  z-index:3;
+}
+#idAzn #idTableMonthsYears .tabrow li.selection2Jahr,
+#idAzn #idTableMonthsYears .tabrow li.selection3Jahr
+{
+  z-index:2;
+}
+
+#idAzn #idTableMonthsYears .tabrow li.selectionMonat:before,
+#idAzn #idTableMonthsYears .tabrow li.selectionMonat:after,
+#idAzn #idTableMonthsYears .tabrow li.selection1Jahr:before,
+#idAzn #idTableMonthsYears .tabrow li.selection1Jahr:after,
+#idAzn #idTableMonthsYears .tabrow li.selection2Jahr:before,
+#idAzn #idTableMonthsYears .tabrow li.selection2Jahr:after,
+#idAzn #idTableMonthsYears .tabrow li.selection3Jahr:before,
+#idAzn #idTableMonthsYears .tabrow li.selection3Jahr:after,
+#idAzn #idTableMonthsYears .tabrow li.selection4Jahr:before,
+#idAzn #idTableMonthsYears .tabrow li.selection4Jahr:after {
+  box-shadow:none;
+  border-bottom-radius:0px;
+  border-width:0;
+}
+#idAzn #idTableMonthsYears .tabrow a {
+  color:#555;
+  text-decoration:none;
+  font-weight: bold;
+}
+#idAzn #idTableMonthsYears .tabrow a.disabled {
+  color:#999;
+  text-decoration: none;
+  font-weight: normal;
+}
+#idAzn #idTableMonthsYears .tabrow li.selected {
+  background:#FFF;
+  color:#333;
+  z-index:7;
+  border-bottom-color:#FFF;
+}
+#idAzn #idTableMonthsYears .tabrow:before {
+  position:absolute;
+  content:" ";
+  width:100%;
+  bottom:0;
+  left:0;
+  border-bottom:1px solid #AAA;
+  z-index:6;
+}
+#idAzn #idTableMonthsYears .tabrow li:before,
+#idAzn #idTableMonthsYears .tabrow li:after {
+  border:1px solid #AAA;
+  position:absolute;
+  bottom:-1px;
+  width:5px;
+  height:5px;
+  content:" ";
+}
+#idAzn #idTableMonthsYears .tabrow li:before {
+  left:-6px;
+  border-bottom-right-radius:6px;
+  border-width:0 1px 1px 0;
+  box-shadow:2px 2px 0 #D1D1D1;
+}
+#idAzn #idTableMonthsYears .tabrow li:after {
+  right:-6px;
+  border-bottom-left-radius:6px;
+  border-width:0 0 1px 1px;
+  box-shadow:-2px 2px 0 #D1D1D1;
+}
+#idAzn #idTableMonthsYears .tabrow li.selected:before {
+  box-shadow:2px 2px 0 #FFF;
+}
+#idAzn #idTableMonthsYears .tabrow li.selected:after {
+  box-shadow:-2px 2px 0 #FFF;
+}
+
+#idAzn #idTableMonthsYears table
+{
+  width: 100%;
+}
+
+#idAzn #idTableMonthsYears .tabrow li
+{
+  width: 40px;
+}
+
+#idAznPinSet img#warningImage
+{
+  padding: 0.5em;
+}
+
+#idAznZugangTable
+{
+  width: 40em;
+}
+
+
+form#list_best .tab_container div, form#list_best .tab_container > table > tbody > tr > td > div > table
+{
+  width: auto;
+}
+
+
+form#list_abw, form#list_abw div, form#list_abw div table, div#idListPSSAbwesenheiten table, div#idListPSSAbwesenheiten div, .PSSBearbeiterStatusTable table, div#idTableSAP1 div, div#idTableSAP1 table, form#list_best .tab_external_content div, form#list_best .tab_external_content table,
+form#list_best div, form#list_best table, form#list_best .tab_container > table > tbody > tr > td > div.tab_external_content > table
+{
+  width: 100%;
+}
+
+
+.PSSBearbeiterStatusTable  th.PSSIconSpalte
+{
+  width: 50px;
+}
+
+.PSSBearbeiterStatusTable  th.PSSStatusSpalte.PSSIconSpalte
+{
+  width: 150px;
+}
+
+.PSSBearbeiterStatusTable  th.PSSNameSpalte
+{
+  width: 250px;
+}
+
+
+.PSSBearbeiterStatusTableDetails  img
+{
+  padding: 0 3px;
+}
+
+
+.PSSBearbeiterStatusTable  th.PSSSpalteDatum
+{
+  width: 10em ;
+}
+
+#contZugOrg div.pss_org_personen_gen {
+ color: #222222;
+    font-size: 0.85em;
+    font-style: italic;
+    padding: 0 0 0 1em;
+}
+
+#idContConfirm div.pss_cont_personen {
+ width: 30em;
+}
+
+#xlist_best table, #xlist_best div
+{
+  width: 100%;
+}
+
+.pss_vertreter_label_rot div
+{
+  color: #d00;
+  background-color: #eee;
+  border: 3px solid #bbbbbb;
+  text-align: center;
+  padding: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+
+
+.pss_workflow_verlauf_inaktiv, .pss_workflow_verlauf_inaktiv a
+{
+   color: #ccc;
+   font-style: italic;
+   
+}
+
+.pss_resize_table
+{
+  display: block;
+  height: 10px;
+  vertical-align: middle;
+}
+
+#idPSSDatumZeitCont > table
+{
+  width: 100%;
+}
+
+fieldset.PSSBearbeiterStatusTable > table > tbody > tr > td > div
+{
+  height: 100px;
+  overflow-y: scroll;
+}
+
+fieldset#idPSSStatusVerlaufDetail  > table
+{
+  width: 100%;
+}
+
+fieldset.PSSBearbeiterStatusTableDetails.PSSBearbeiterStatusTable > table > tbody > tr > td > div
+{
+  height: auto;
+  overflow-y: auto;
+}
+
+.pss_option_margin 
+ {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;  
+ }
+
+
+div.file_upload_internal_container > img {display: none;}
+
+
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    PSS/MMS                                                  */
+/* --------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
+/* Custom Tree Dokumentation */
+/* ------------------------------------------------------------------------- */
+
+#idDokuTree ul.mktree > li > div.contentDiv { /*1te ebene*/ } 
+#idDokuTree ul.mktree > li > ul > li  > div.contentDiv {  /*2te ebene*/ } 
+#idDokuTree ul.mktree > li > ul > li > ul > li > div.contentDiv { /*3te ebene*/ }
+/* .. */
+
+
+#idDokuTree ul.mktree li.liBullet:hover { background: #dedede; } /* Mouse-Over Style */
+
+#idDokuTree ul.mktree li.liBullet, #idDokuTree ul.mktree li.liClosed  { /* general height of lines */
+  height: 1.5em; 
+  line-height: 1.5em; 
+  vertical-align: top;
+}
+
+#idDokuTree ul.mktree li.liOpen  { /* for the open folder spacing */
+  line-height: 1.5em; 
+  vertical-align: top; 
+  height: auto;
+}
+
+#idDokuTree ul.mktree li.liOpen > ul { /* space after each ul in expanded li */
+  margin-bottom:6px;
+}
+#idDokuTree ul.mktree li.liOpen > ul > .liBullet:first-child  { /* first item in expanded li does not need extra spacing */
+  padding-bottom: 0px; 
+  margin-top:-2px;
+}
+
+#idDokuTree ul.mktree li > img { /* arrange folder and empty icons in each line */
+  width: 20px;
+}
+
+#idDokuTree ul.mktree > li div.contentDiv {  /* general font-size and text-align */
+  font-size: 14px;
+  display: inline; /* inline-block not working correctly in ie */
+  text-align: left;
+  vertical-align: top;
+}
+
+#idDokuTree ul.mktree li.liBullet  { /* bit more spacing between the bullet entry lines */
+  padding-bottom: 2px;
+}
+
+#idDokuTree ul.mktree li.liBullet > div.contentDiv > a > img { /* height of bullet entries and space between icon and text */
+  padding-right: 4px; 
+  height: 1em;
+}
+
+#idDokuTree ul.mktree ul > li > a.treeNA  { /* arrange the plus- and minus icons for expand/collsapse */
+  display: inline-block;
+  width: 20px;
+  padding-left: 2px;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------------------- */
+/* ENDE - Custom Tree Dokumentation */
+/* ------------------------------------------------------------------------- */
+
+
+fieldset.noBorder td {
+  border: none !important;
+}
+
+a.bold {
+    font-weight: bold !important;
+}
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN Kontext:    Bewerbungen                                             */
+/* --------------------------------------------------------------------------*/
+  .bewerbungSummary input[readonly]
+, .bewerbungSummary input[disabled]
+, .bewerbungSummary textarea[readonly]
+, .bewerbungSummary select[disabled]
+, .bewerbungSummary table.CBgroup {
+    border: none;
+    background: none;
+    color: black;
+    margin-left: 4px;
+}
+
+.bewerbungSummary select[disabled] {
+    margin-left: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; /* does not work for FF */
+    text-indent: 0.01px; /* workaround for FF */
+    text-overflow: ''; /* workaround for FF */
+/*  border: 1px solid #ccc;*/
+}
+
+@-moz-document url-prefix() { 
+  .bewerbungSummary select[disabled] {
+    border: 1px solid #ccc;
+  }
+}
+
+
+.bewerbungSummary table.CBgroup {
+    width: 100%;
+}
+
+.bewerbungSummary td.CBoptionTextDisabled {
+    color: black;
+}
+
+/** IE 10+ **/
+.bewerbungSummary select::-ms-expand {
+    display: none;
+}
+
+.bewerbungPreview {
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 30%;
+    bottom: 0;
+    right: 30%;
+    pointer-events: none;
+}
+
+.bewerbungPreview.DE {
+    background-image: url(/tumprod/img/wizard_vorschau_de.png);
+}
+
+.bewerbungPreview.EN {
+    background-image: url(/tumprod/img/wizard_vorschau_en.png);
+}
+
+div.bewerbungDetailSection > div.MaskBackground {
+  display: block;
+}
+
+div.bewerbungDetailSectionHeader {
+  padding: 10px 0px 10px 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+div.bewerbungDetailSectionSeparator {
+  margin-left: 20px;
+  border-bottom: 1px solid lightGray;
+}
+
+div.bewerbungDetailSectionContent {
+  margin: 10px 0px 0px 30px;
+}
+
+div.bewerbungDetailSectionContent table {
+  width: 100%;
+}
+
+div.bewerbungDetailSection img, div.bewerbungDetailSection a > img {
+  margin: 0px 5px -3px 0px;
+}
+
+div.bewerbungDetailSection fieldset legend {
+  font-weight: bold;
+}
+
+div.bewerbungDetailSection td.MaskRenderer {
+  vertical-align: top;
+  padding-bottom: 3px !important;
+}
+
+div.bewerbungDetailSection ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+div.bewerbungDetailSection li > ul {
+  padding-left: 40px;
+}
+
+div.bewerbungDok > table.cotable td {
+  border: none !important;
+}
+
+table.cotable tr.bewerbungDokListRow {
+  cursor: pointer;
+  background: white;
+  line-height: 30px;
+}
+
+table.cotable td.bewerbungDokListHandleCell {
+  width: 16px;
+}
+
+table.cotable td.bewerbungDokListIconCell {
+  width: 16px;
+  border-bottom: 1px solid lightGray !important;
+}
+
+table.cotable td.bewerbungDokListTextCell {
+  border-bottom: 1px solid lightGray !important;
+}
+
+table.cotable td.bewerbungDokListBorderTop {
+  border-top: 1px solid lightGray !important;
+}
+
+table.cotable div.bewerbungDokDetail {
+  display: block;
+  margin: 10px;
+}
+
+table.cotable div.bewerbungDokDetail table {
+  width: auto;
+}
+
+table.cotable div.bewerbungDokDetail td.MaskRenderer img {
+  margin: 0px 5px -3px 5px;
+}
+
+div.bewerbungList td > img {
+  margin: 0px 0px -2px 0px;
+}
+
+div.bewerbungListAktionen span {
+  padding: 0px 7px 0px 7px;
+}
+
+div.bewerbungListAktionen table.cotable td > img {
+  margin: 0px 0px -2px 0px;
+}
+
+div.bewerbungListAktionen a.commandButton {
+  padding: 3px !important;
+}
+
+.bwTableCT td {
+  border: none;
+  vertical-align: top;
+}
+
+.bwTableCT td > a.commandButton {
+  margin-left: 0.5em;
+  margin-right: 0;
+  margin-top: 2px;
+  width: 100%;
+}
+
+div.bwTableToolBar td.MaskLabel {
+  background-color: transparent;
+}
+
+div.bwTableToolBar label {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+label.bwTableToolBar {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+div.bwTableToolBar {
+    float: left;
+}
+
+div.bwSearchField {
+  border: 1px solid lightBlue;
+  margin: 0 2px;
+  padding: 0px 5px 0px 10px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+div.bwSearchField input[type="text"] {
+  border: none;
+  height: 19px;
+  line-height: 19px;
+  padding: 0;
+}
+
+div.bwSearchField input[type="text"]:focus {
+  box-shadow: none;
+}
+
+div.bwSearchField img {
+  padding-top: 2px;
+}
+
+div.bwSearchField a.commandButton {
+  height: 16;
+  width: 16;
+  border: none;
+  background-color: white;
+  margin-left: -2px;
+  padding: 0;
+}
+
+.bwContainer > table {
+  width: 100%;
+}
+
+.bwContainer .tab_container tr:first-child table {
+  width: auto !important;
+}
+
+
+.bwNcBezugsgroessenWert {
+    margin-top: 0.28em;
+    margin-bottom: 1.07em;
+}
+
+.bwNcContainer {
+  width: 39em;
+  overflow: auto;
+  margin-top: 0.5em;
+}
+
+.bwAuflagenAddCommand, .bwInheritWidthClass{
+  width: inherit !important;
+}
+
+.bwAuflagenBegruendungCommand{
+  text-align: justify;
+}
+
+
+ul.bwNcStudienpakete {
+  padding: 0; 
+} 
+
+ul.bwNcStudienpakete li{
+  list-style-type: none;
+  white-space: nowrap !important;
+} 
+
+
+ul.bwNcStudienpakete li{
+  list-style-type: none;
+  white-space: nowrap !important;
+} 
+
+ul.bwNcStudienpakete li:before {
+  padding-right: 0.3em;
+  min-width: 10px;
+  color: #b2b2b2;
+  font-weight: lighter;
+  display: inline-block;
+}
+
+ul.bwNcStudienpakete li:first-child:before {
+  transform: scaleY(-1);
+  content: "L";
+}
+
+ul.bwNcStudienpakete li:not(:first-child):not(:last-child):before {
+ content: "|";
+}
+
+ul.bwNcStudienpakete li:last-child:before {    
+    transform: scaleY(1);
+    content: "L";
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    Bewerbungen                                             */
+/* --------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN     Kontext:    Aufgaben / GPR Table Form Styles                    */
+/* ------------------------------------------------------------------------- */
+
+/* min width as tabs above */
+#IdContAllFolders fieldset table fieldset > table, 
+#IdContAllFolders div.MaskS > table.cotable,
+#IdContAlleFormUebersicht fieldset table fieldset > table, 
+#IdContAlleFormUebersicht div.MaskS > table.cotable  { 
+min-width: 47em; 
+}
+
+/* better readability with customized text positioning in gpr tables because of included html table contents */
+#IdContMostImportantFolders tr.coRow > td.L:not(:first-child) > span > div > table > tbody > tr> td,
+#IdContAllFolders tr.coRow > td.L:not(:first-child) > span > div > table > tbody > tr> td { 
+ display:inline-block; float:left; 
+}
+#IdContMostImportantFolders table div > table > tbody > tr.coRow > td.L, 
+#IdContAllFolders table div > table > tbody > tr.coRow > td.L { 
+ display:block; clear:both; 
+}
+/* no text-wrap in first table for stammdaten */
+#IdContMostImportantFolders table.cotable span > div.nowrap > table > tbody > tr > td > a > img, 
+#IdContAllFolders table.cotable span > div.nowrap > table > tbody > tr > td > a > img { 
+ float:right; margin-left:4px; margin-top:1px; 
+}
+#IdContMostImportantFolders table.cotable span > div.nowrap > table > tbody > tr > td, 
+#IdContAllFolders table.cotable span > div.nowrap > table > tbody > tr > td  { 
+ white-space:nowrap; 
+}
+#IdContSearchForms table div > table > tbody > tr.coRow > td.L, 
+#IdContAlleFormUebersicht table div > table > tbody > tr.coRow > td.L, 
+#IdContSearchForms table div > table > tbody > tr.coRow > td.R, 
+#IdContAlleFormUebersicht table div > table > tbody > tr.coRow > td.R, 
+#IdContMostImportantFolders table div > table > tbody > tr.coRow > td.L, 
+#IdContAllFolders table div > table > tbody > tr.coRow > td.L { 
+ vertical-align: top;
+}
+#IdContSearchForms table div > table > tbody > tr.coRow > td.L table,
+#IdContAlleFormUebersicht table div > table > tbody > tr.coRow > td.L table,
+#IdContAlleFormListe table div > table > tbody > tr.coRow > td.L table { 
+ border-spacing: 0; padding:0; margin:0;  
+}
+#IdContSearchForms table div > table > tbody > tr.coRow > td.L table td , 
+#IdContAlleFormUebersicht table div > table > tbody > tr.coRow > td.L table td { 
+ padding:0 0.25em 0.25em 0.25em; line-height:1.5em; 
+}
+#IdContSearchForms table div > table > tbody > tr.coRow > td.L > a, 
+#IdContAlleFormUebersicht  table div > table > tbody > tr.coRow > td.L > a, 
+#IdContMostImportantFolders table div > table > tbody > tr.coRow > td.L > a, 
+#IdContAllFolders table div > table > tbody > tr.coRow > td.L > a { 
+ display: inline; 
+}
+#IdContMostImportantFolders table div > table > tbody > tr.coRow > td.L > a,
+#IdContAllFolders table div > table > tbody > tr.coRow > td.L > a { 
+ display:inline-block; clear:both; 
+}
+#IdContAllFolders div > table.cotable > tbody > tr > td.L,
+#IdContMostImportantFolders div > table.cotable > tbody > tr > td.L { 
+ display: block; float:none;
+}
+#IdContAllFolders table div > table > tbody > tr.coRow > td.L > span > div.nowrap,
+#IdContMostImportantFolders table div > table > tbody > tr.coRow > td.L > span > div.nowrap {
+ display: block; clear:both; float:none;
+}
+.tab_internal_content #IdContSearchForms  table.cotable .coRow div.nowrap td {
+ white-space: nowrap;
+}
+/* outcommented for no text wrap in 1st forms columng for stammdaten */
+/*#IdContSearchForms div.nowrap table.cotable tbody .coRow td.L > span > div.nowrap table td, 
+#IdContAlleFormListe div.nowrap table.cotable tbody .coRow td.L > span > div.nowrap table td {
+float:left; white-space:normal; 
+}*/
+
+/* wrap/break text in form overlays */
+#IdContAlleFormListe div > table.cotable > tbody > tr > td.L, 
+#IdContAlleFormListe div > table.cotable > tbody > tr > td.R { 
+ white-space: normal; 
+ vertical-align: top;
+} 
+#IdContAlleFormListe div > table.cotable > tbody > tr > td.L > a ,
+#IdContAlleFormListe div > table.cotable > tbody > tr > td.R > a {
+ display: inline; 
+}
+
+/* less spacing in form overlay inner tables */
+#IdContSearchForms table div > table.cotable, 
+#IdContSearchFormstable div > table.cotable table,
+#IdContAlleFormListe table div > table.cotable, 
+#IdContAlleFormListe table div > table.cotable table { 
+ border-spacing: 0; 
+} 
+#IdContSearchForms table div > table.cotable table td,
+#IdContAlleFormListe table div > table.cotable table td {
+ vertical-align: top; padding: 0 2px; 
+}
+
+/* wrap text in table headers */
+#IdContAlleFormListe table div > table.cotable > thead tr th, 
+#IdContSearchForms table div > table.cotable > thead tr th { 
+ white-space: normal; 
+}
+#IdContAlleFormListe table div > table.cotable > thead tr th.L > a, 
+#IdContSearchForms table div > table.cotable > thead tr th.L > a { 
+ white-space: nowrap; float:right; 
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* END     Kontext:    Aufgaben / GPR Table Form Styles                      */
+/* --------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN   Kontext:    HTML-Template Modulbeschreibung(2013_262)             */
+/* --------------------------------------------------------------------------*/
+#modhb_html_template_header{
+  margin: 0.5%;
+  font-size:0.9em;
+  padding-bottom: 1%; /* Abstand zum Border in modhb_html_template_main */
+}
+#modhb_html_template_main {
+  margin: 0.5%;
+  padding-top: 3%; /*sichtbarer Abstand zum Header */
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  font-size: 0.9em;
+}
+#modhb_html_template_footer{
+  margin: 0.5%;
+  font-size:0.7em;
+  padding-top: 1%; /* Abstand zum Border in modhb_html_template_main */
+}
+.modhb_html_template_row{
+  padding-bottom: 2%;
+}
+.modhb_html_template_row > .modhb_html_template_4_column {
+  padding-right: 2%;
+  float: left;
+  width: 23%;
+}
+.modhb_html_template_row > .modhb_html_template_2_column {
+  padding-right: 2%;
+  float: left;
+  width: 40%;
+}
+.modhb_html_template_2_column > img {
+  float: right;
+  width: 200px;
+}
+.modhb_html_template_clear {
+    clear: both;
+}
+
+fieldset#pss_erfassen_information > table > tbody > tr > td.top
+{
+  vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    HTML-Template Modulbeschreibung(2013_262)               */
+/* --------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
+/* BEGIN   Kontext:    CO-EasterEgg                                           */
+/* --------------------------------------------------------------------------*/
+
+.ea_abs_class{
+   position:absolute;
+   left:0px;
+   top:0px;
+   width:100%;
+   height:100%;
+}
+  
+#ea_fog_div{
+   z-index:6000;
+   background-color:black;
+}   
+
+#ea_listing_div_father{
+   z-index:6001;
+}
+
+#ea_spec_div{
+   position:absolute;
+   left:50%;
+   top:50%;
+   width:502px;
+   height:450px;
+   margin-left:-251px;
+   margin-top:-225px;
+}
+
+#ea_listing_div{
+   position:absolute;
+   left:0px;
+   bottom:10px;
+   width:100%;
+   overflow:hidden;
+   background-color:#30303b;
+   color:white;
+   font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size:12px;
+}
+
+#ea_overlay_div_parent{
+   z-index:6002;
+}
+
+#ea_overlay_div{
+   position:absolute;
+   top:50%;
+   left:50%;
+   width:502px;
+   height:450px;
+   margin-left:-251px;
+   margin-top:-225px;
+}
+
+#ea_overlay_table{
+   border-collapse:collapse;
+}
+
+#ea_overlay_table td{
+   margin:0;
+   padding:0;
+}
+
+#ea_corner_left{
+   height:9px;
+   width:9px;
+   background-image: url(/tumprod/img/corner_tl.png);
+}
+
+#ea_top_center{
+   height:9px;
+   width:484px;
+   background-color:black;
+}
+
+#ea_corner_right{
+   height:9px;
+   width:9px;
+   background-image: url(/tumprod/img/corner_tr.png);
+}
+
+#ea_co_logo{
+   height:58px;
+   width:502px;
+   background-image: url(/tumprod/img/logo_grau.gif);
+}
+
+#ea_dimmer_top{
+   height:100px;
+   width:502px;
+   background-image: url(/tumprod/img/grad_top.png);
+}
+
+#ea_spacer_td{
+   height:195px;
+   width:502px;
+}
+
+
+#ea_dimmer_bottom{
+   height:79px;
+   width:502px;
+   background-image: url(/tumprod/img/grad_bott.png);
+}
+
+#ea_bottom_left{
+   height:9px;
+   width:9px;
+   background-image: url(/tumprod/img/corner_bl.png);
+}
+
+#ea_bottom_center{
+   height:9px;
+   width:484px;
+   background-color:black;
+}
+
+#ea_bottom_right{
+   height:9px;
+   width:9px;
+   background-image: url(/tumprod/img/corner_br.png);
+}
+
+#ea_geek_table{
+   width:100%;
+   height:100%;
+   position:absolute;
+   left:0px;
+   bottom:0px;
+}
+
+#ea_geek_table td{
+   text-align:center;
+   vertical-align:middle;
+   height:30px; 
+}
+/* ------------------------------------------------------------------------- */
+/* END   Kontext:    CO-EasterEgg                                           */
+/* --------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN   Kontext:    LV-Detailansicht                                      */
+/* --------------------------------------------------------------------------*/
+.LvVortragendeCont{ /*SR-32547*/
+max-width: 42em;
+}
+.LvVortragendeCont tr > td, tr > td > a{
+display: inline-block; white-space: normal;
+}
+.LvVortragendeCont > table > tbody > tr > td.MaskRenderer > a { 
+padding-left: 16px; 
+background: transparent url("../img/funktionaer_s.gif") no-repeat 0px 2px; 
+}
+/* ------------------------------------------------------------------------- */
+/* END     Kontext:    LV-Detailansicht                                      */
+/* --------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------- */
+/* BEGIN   Kontext:    SPO-Baumkomponente                                    */
+/* --------------------------------------------------------------------------*/
+.windowContent ul.spo-path-component.expanded { 
+float: left; 
+width: auto; 
+overflow-x: auto; 
+} 
+/* ------------------------------------------------------------------------- */
+/* END     Kontext:    SPO-Baumkomponente                                    */
+/* --------------------------------------------------------------------------*/
+
+/* do not show empty dummy links on screen-readers */
+a:empty[onblur*="blurRow"] { display: none; } 
